@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">5303-5308</string>
+
+    <!-- 通用 -->
+    <string name="main_page">Main Page</string>
+    <string name="record">Record</string>
+
+    <!-- 登入介面 -->
+    <string name="login">Login</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="login_failed">Login failed. Please check your credentials.</string>
+    <string name="login_successful">Login Successful</string>
+
+    <!-- 主頁 -->
+    <string name="feel_your_breath">Feel Your Breath</string>
+    <string name="starting_test">Starting Test</string>
+    <string name="random_colour">Random Colour</string>
+    <string name="placeholder_feature">This feature will be implemented later.</string>
+
+    <!-- 故事/答題介面 -->
+    <string name="topic">Topic</string>
+    <string name="start">Start</string>
+    <string name="question">Question:</string>
+
+    <!-- 結算介面 -->
+    <string name="your_mood_is">Your current mood is</string>
+
+    <!-- 心情 -->
+    <string name="happy">Happy</string>
+    <string name="sad">Sad</string>
+    <string name="anger">Anger</string>
+    <string name="fear">Fear</string>
+    <string name="self_abasement">Self-abasement</string>
+    <string name="anxiety">Anxiety</string>
+    <string name="disgust">Disgust</string>
+
+    <!-- 記錄頁面 -->
+    <string name="no_records_yet">還沒有記錄。</string>
+</resources>

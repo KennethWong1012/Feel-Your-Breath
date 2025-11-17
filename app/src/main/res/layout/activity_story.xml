@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_background"
+    android:padding="32dp"
+    tools:context=".StoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTopicTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@color/white_element_bg"
+            android:paddingLeft="32dp"
+            android:paddingTop="8dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="8dp"
+            android:text="@string/topic"
+            android:textColor="@color/text_color"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStoryContent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="32dp"
+            android:background="@color/white_element_bg"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="This is where the story content will be displayed."
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnStartQuiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_box_background"
+            android:paddingLeft="48dp"
+            android:paddingRight="48dp"
+            android:text="@string/start"
+            android:textColor="@color/text_color"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

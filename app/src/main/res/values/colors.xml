@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App 主題顏色 -->
+    <color name="light_blue_background">#A9D8F5</color> <!-- 淺藍色背景 -->
+    <color name="text_color">#4A5C94</color> <!-- 深藍色文字 -->
+    <color name="white_element_bg">#FFFFFF</color> <!-- 白色元件背景 -->
+
+    <!-- 心情顏色 -->
+    <color name="mood_happy">#FFE4A7</color>
+    <color name="mood_sad">#B8DEFF</color>
+    <color name="mood_anger">#FFA5A5</color>
+    <color name="mood_fear">#E5C5FF</color>
+    <color name="mood_self_abasement">#FFD4F0</color>
+    <color name="mood_anxiety">#FFC89C</color>
+    <color name="mood_disgust">#C8F4A8</color>
+</resources>

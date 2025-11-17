@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_background"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white_element_bg"
+        android:paddingLeft="16dp"
+        android:paddingTop="4dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="4dp"
+        android:text="@string/question"
+        android:textColor="@color/text_color"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/white_box_background"
+        android:minHeight="100dp"
+        android:padding="16dp"
+        android:text="Question text will appear here."
+        android:textColor="@color/text_color"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnAnswerA"
+        style="@style/AnswerButtonStyle"
+        android:text="A:" />
+
+    <Button
+        android:id="@+id/btnAnswerB"
+        style="@style/AnswerButtonStyle"
+        android:text="B:" />
+
+    <Button
+        android:id="@+id/btnAnswerC"
+        style="@style/AnswerButtonStyle"
+        android:text="C:" />
+
+    <Button
+        android:id="@+id/btnAnswerD"
+        style="@style/AnswerButtonStyle"
+        android:text="D:" />
+
+    <Button
+        android:id="@+id/btnAnswerE"
+        style="@style/AnswerButtonStyle"
+        android:text="E:" />
+
+    <Button
+        android:id="@+id/btnAnswerF"
+        style="@style/AnswerButtonStyle"
+        android:text="F:" />
+
+    <Button
+        android:id="@+id/btnAnswerG"
+        style="@style/AnswerButtonStyle"
+        android:text="G:" />
+
+</LinearLayout>
