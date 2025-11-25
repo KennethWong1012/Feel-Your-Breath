@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:background="@color/light_blue_background"
     android:padding="24dp"
-    tools:context=".RecordActivity">
+    tools:context=".FavoriteColorsActivity">
 
     <TextView
-        android:id="@+id/tvRecordTitle"
+        android:id="@+id/tvFavoriteTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -18,7 +18,7 @@
         android:paddingTop="4dp"
         android:paddingRight="16dp"
         android:paddingBottom="4dp"
-        android:text="@string/record"
+        android:text="@string/favorite_colors"
         android:textColor="@color/text_color"
         android:textSize="28sp"
         android:textStyle="bold" />
@@ -27,13 +27,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/btnReturnMain"
-        android:layout_below="@id/tvRecordTitle"
+        android:layout_below="@id/tvFavoriteTitle"
         android:layout_marginBottom="16dp"
         android:background="@color/white_element_bg"
         android:padding="8dp">
 
         <LinearLayout
-            android:id="@+id/layoutRecords"
+            android:id="@+id/layoutFavorites"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" />
@@ -43,9 +43,8 @@
         android:id="@+id/btnReturnMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btnPause"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/white_box_background"
         android:paddingLeft="24dp"
         android:paddingRight="24dp"
@@ -53,15 +52,5 @@
         android:textColor="@color/text_color"
         android:textSize="24sp"
         android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/btnPause"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/circular_button_background"
-        android:drawableTop="@drawable/pause_icon"
-        android:paddingTop="13dp" />
 
 </RelativeLayout>

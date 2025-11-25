@@ -23,438 +23,434 @@ public class QuizData {
     }
 
     private static StoryTheme createTheme1() {
-        String title = "魔法森林的冒險";
-        String story = "你走進一個閃閃發光的魔法森林，樹木會說話，動物們邀請你一起探索秘密寶藏！";
+        String title = "The Magical Forest Adventure";
+        String story = "You walk into a shimmering magical forest where the trees can talk, and the animals invite you to explore hidden treasures!";
         List<QuizModels.Question> questions = Arrays.asList(
-                new QuizModels.Question("會說話的樹木送你一片發光的葉子，你心裡想？", Arrays.asList(
-                        new QuizModels.Answer("太棒了！我要好好收藏它。", Mood.HAPPY),
-                        new QuizModels.Answer("要是我的朋友也能看到就好了。", Mood.SAD),
-                        new QuizModels.Answer("為什麼只有一片？真小氣。", Mood.ANGER),
-                        new QuizModels.Answer("這葉子會不會有魔法詛咒？", Mood.FEAR),
-                        new QuizModels.Answer("我不配收到這麼好的禮物。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("我該怎麼回禮才對？", Mood.ANXIETY),
-                        new QuizModels.Answer("這葉子黏黏的，我不喜歡。", Mood.DISGUST)
+                new QuizModels.Question("A talking tree gives you a glowing leaf. What do you think?", Arrays.asList(
+                        new QuizModels.Answer("Awesome! I'm going to treasure this.", Mood.HAPPY),
+                        new QuizModels.Answer("I wish my friends could see this too.", Mood.SAD),
+                        new QuizModels.Answer("Why only one leaf? How stingy.", Mood.ANGER),
+                        new QuizModels.Answer("I wonder if this leaf has a magical curse.", Mood.FEAR),
+                        new QuizModels.Answer("I don't deserve such a nice gift.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("How should I reciprocate?", Mood.ANXIETY),
+                        new QuizModels.Answer("This leaf is sticky; I don't like it.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("一隻小鹿請你幫它找回家的路，你會？", Arrays.asList(
-                        new QuizModels.Answer("開心答應，覺得自己能幫忙真好。", Mood.HAPPY),
-                        new QuizModels.Answer("想到小鹿迷路了，有點難過。", Mood.SAD),
-                        new QuizModels.Answer("覺得它打擾了你的探險。", Mood.ANGER),
-                        new QuizModels.Answer("擔心自己也迷路。", Mood.FEAR),
-                        new QuizModels.Answer("怕自己沒有能力幫助它。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("緊張地想著萬一找不到怎麼辦。", Mood.ANXIETY),
-                        new QuizModels.Answer("不想碰觸陌生的動物。", Mood.DISGUST)
+                new QuizModels.Question("A little deer asks you to help it find its way home. You...", Arrays.asList(
+                        new QuizModels.Answer("Happily agree, feeling great about being able to help.", Mood.HAPPY),
+                        new QuizModels.Answer("Feel a bit sad thinking about the deer being lost.", Mood.SAD),
+                        new QuizModels.Answer("Feel like it's interrupting your exploration.", Mood.ANGER),
+                        new QuizModels.Answer("Worry that you might get lost yourself.", Mood.FEAR),
+                        new QuizModels.Answer("Are afraid you don't have the ability to help it.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Nervously think, \"What if I can't find the way?\"", Mood.ANXIETY),
+                        new QuizModels.Answer("Don't want to touch an unfamiliar animal.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("森林深處傳來奇怪的聲音，你的反應是？", Arrays.asList(
-                        new QuizModels.Answer("好奇又興奮，想過去看看。", Mood.HAPPY),
-                        new QuizModels.Answer("感覺那聲音聽起來很孤單。", Mood.SAD),
-                        new QuizModels.Answer("對這種嚇人的聲音感到生氣。", Mood.ANGER),
-                        new QuizModels.Answer("立刻停下腳步，不敢前進。", Mood.FEAR),
-                        new QuizModels.Answer("一定是怪物，我應該打不過。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("心跳加速，不知道該怎麼辦。", Mood.ANXIETY),
-                        new QuizModels.Answer("真討厭這種詭異的聲音。", Mood.DISGUST)
+                new QuizModels.Question("A strange sound comes from deep in the forest. Your reaction is to...", Arrays.asList(
+                        new QuizModels.Answer("Feel curious and excited, wanting to check it out.", Mood.HAPPY),
+                        new QuizModels.Answer("Feel like the sound seems lonely.", Mood.SAD),
+                        new QuizModels.Answer("Feel annoyed by the scary sound.", Mood.ANGER),
+                        new QuizModels.Answer("Stop immediately, not daring to go further.", Mood.FEAR),
+                        new QuizModels.Answer("Think, \"It must be a monster I can't defeat.\"", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Feel your heart race, not knowing what to do.", Mood.ANXIETY),
+                        new QuizModels.Answer("Really dislike this eerie sound.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("你發現一個用藤蔓盪過河岸的機會，你會？", Arrays.asList(
-                        new QuizModels.Answer("覺得太刺激了，立刻嘗試！", Mood.HAPPY),
-                        new QuizModels.Answer("盪過去的時候，有點想哭。", Mood.SAD),
-                        new QuizModels.Answer("氣自己為什麼不會飛。", Mood.ANGER),
-                        new QuizModels.Answer("緊緊抓住藤蔓，不敢動。", Mood.FEAR),
-                        new QuizModels.Answer("別人一定做得比我好。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("反复想著藤蔓會不會斷掉。", Mood.ANXIETY),
-                        new QuizModels.Answer("藤蔓看起來好髒，不想碰。", Mood.DISGUST)
+                new QuizModels.Question("You find an opportunity to swing across a riverbank on a vine. You...", Arrays.asList(
+                        new QuizModels.Answer("Think it's thrilling and try it immediately!", Mood.HAPPY),
+                        new QuizModels.Answer("Feel like crying while swinging across.", Mood.SAD),
+                        new QuizModels.Answer("Get angry at yourself for not knowing how to fly.", Mood.ANGER),
+                        new QuizModels.Answer("Hold onto the vine tightly, not daring to move.", Mood.FEAR),
+                        new QuizModels.Answer("Think others would definitely do this better than me.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Repeatedly wonder if the vine will break.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the vine looks too dirty and don't want to touch it.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("動物們為你舉辦了一場歡迎派對，你感覺？", Arrays.asList(
-                        new QuizModels.Answer("非常開心，和大家一起跳舞。", Mood.HAPPY),
-                        new QuizModels.Answer("派對總會結束，有點傷感。", Mood.SAD),
-                        new QuizModels.Answer("不喜歡它們安排的遊戲。", Mood.ANGER),
-                        new QuizModels.Answer("被這麼多動物圍觀，好緊張。", Mood.FEAR),
-                        new QuizModels.Answer("我不值得大家為我這樣做。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心自己在派對上出錯。", Mood.ANXIETY),
-                        new QuizModels.Answer("不喜歡派對上的食物。", Mood.DISGUST)
+                new QuizModels.Question("The animals throw a welcome party for you. You feel...", Arrays.asList(
+                        new QuizModels.Answer("Very happy and dance with everyone.", Mood.HAPPY),
+                        new QuizModels.Answer("A bit sad that the party will eventually end.", Mood.SAD),
+                        new QuizModels.Answer("Annoyed by the games they planned.", Mood.ANGER),
+                        new QuizModels.Answer("Nervous being watched by so many animals.", Mood.FEAR),
+                        new QuizModels.Answer("That you aren't worth all this fuss.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worried about making a mistake at the party.", Mood.ANXIETY),
+                        new QuizModels.Answer("That you don't like the party food.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("冒險結束了，你必須離開魔法森林，你會？", Arrays.asList(
-                        new QuizModels.Answer("期待下一次再來玩。", Mood.HAPPY),
-                        new QuizModels.Answer("捨不得離開，有點想哭。", Mood.SAD),
-                        new QuizModels.Answer("生氣為什麼不能留在這裡。", Mood.ANGER),
-                        new QuizModels.Answer("怕出去後就忘記這裡了。", Mood.FEAR),
-                        new QuizModels.Answer("森林沒有我也會一樣快樂吧。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心以後再也進不來了。", Mood.ANXIETY),
-                        new QuizModels.Answer("終於可以離開這麻煩的地方了。", Mood.DISGUST)
+                new QuizModels.Question("The adventure is over, and you must leave the magical forest. You...", Arrays.asList(
+                        new QuizModels.Answer("Look forward to coming back to play next time.", Mood.HAPPY),
+                        new QuizModels.Answer("Are reluctant to leave and feel like crying.", Mood.SAD),
+                        new QuizModels.Answer("Get angry about why you can't stay.", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid you'll forget this place after leaving.", Mood.FEAR),
+                        new QuizModels.Answer("Think the forest will be just as happy without me.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry that you might not be able to come back in the future.", Mood.ANXIETY),
+                        new QuizModels.Answer("Are relieved to finally leave this troublesome place.", Mood.DISGUST)
                 ))
         );
         return new StoryTheme(title, story, questions);
     }
 
     private static StoryTheme createTheme2() {
-        String title = "太空船探險";
-        String story = "你駕駛一艘太空船，飛向未知星球，那裡有友善的外星人和閃爍的星星等著你！";
+        String title = "Spaceship Expedition";
+        String story = "You pilot a spaceship to an unknown planet, where friendly aliens and twinkling stars await you!";
         List<QuizModels.Question> questions = Arrays.asList(
-                new QuizModels.Question("太空船即將降落在從未有人類去過的星球，你感到？", Arrays.asList(
-                        new QuizModels.Answer("無比興奮，準備第一個衝出去！", Mood.HAPPY),
-                        new QuizModels.Answer("想到自己是孤單一人，有點感傷。", Mood.SAD),
-                        new QuizModels.Answer("對控制台緩慢的速度感到不耐煩。", Mood.ANGER),
-                        new QuizModels.Answer("害怕門後會有未知的危險。", Mood.FEAR),
-                        new QuizModels.Answer("我可能是最不適合執行這任務的人。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心飛船的空氣系統會不會故障。", Mood.ANXIETY),
-                        new QuizModels.Answer("覺得外星可能充滿細菌。", Mood.DISGUST)
+                new QuizModels.Question("The spaceship is about to land on a planet no human has ever visited. You feel...", Arrays.asList(
+                        new QuizModels.Answer("Incredibly excited, ready to be the first one out!", Mood.HAPPY),
+                        new QuizModels.Answer("A bit melancholic, thinking about being alone.", Mood.SAD),
+                        new QuizModels.Answer("Impatient with the console's slow speed.", Mood.ANGER),
+                        new QuizModels.Answer("Afraid of unknown dangers behind the door.", Mood.FEAR),
+                        new QuizModels.Answer("That I'm probably the least suitable person for this mission.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worried that the ship's air system might malfunction.", Mood.ANXIETY),
+                        new QuizModels.Answer("That the alien world is probably full of germs.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("一個長相奇特的外星人向你伸出手，你會？", Arrays.asList(
-                        new QuizModels.Answer("高興地與它握手，交新朋友。", Mood.HAPPY),
-                        new QuizModels.Answer("它的手看起來很孤單，讓我難過。", Mood.SAD),
-                        new QuizModels.Answer("不喜歡它未經允許就靠近。", Mood.ANGER),
-                        new QuizModels.Answer("害怕它會傷害我，後退一步。", Mood.FEAR),
-                        new QuizModels.Answer("我的手和它不一樣，真糟糕。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("猶豫著該不該伸手。", Mood.ANXIETY),
-                        new QuizModels.Answer("它看起來黏黏的，不想碰。", Mood.DISGUST)
+                new QuizModels.Question("An alien with a strange appearance reaches out its hand to you. You...", Arrays.asList(
+                        new QuizModels.Answer("Happily shake its hand and make a new friend.", Mood.HAPPY),
+                        new QuizModels.Answer("Feel sad because its hand looks lonely.", Mood.SAD),
+                        new QuizModels.Answer("Dislike it approaching without permission.", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid it might hurt you and take a step back.", Mood.FEAR),
+                        new QuizModels.Answer("Think, \"My hand is different from its, how awful.\"", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Hesitate about whether you should reach out.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think it looks slimy and don't want to touch it.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("外星食物看起來像一團發光的果凍，你會？", Arrays.asList(
-                        new QuizModels.Answer("太酷了！我要嘗嘗看！", Mood.HAPPY),
-                        new QuizModels.Answer("懷念起地球上的食物。", Mood.SAD),
-                        new QuizModels.Answer("為什麼沒有正常的食物？", Mood.ANGER),
-                        new QuizModels.Answer("怕吃了身體會過敏。", Mood.FEAR),
-                        new QuizModels.Answer("連吃東西我都這麼膽小。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心吃了會肚子痛。", Mood.ANXIETY),
-                        new QuizModels.Answer("看起來真噁心，不想試。", Mood.DISGUST)
+                new QuizModels.Question("The alien food looks like a glowing blob of jelly. You...", Arrays.asList(
+                        new QuizModels.Answer("Think it's so cool! I want to try it!", Mood.HAPPY),
+                        new QuizModels.Answer("Start missing food from Earth.", Mood.SAD),
+                        new QuizModels.Answer("Wonder why there's no normal food?", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid your body will have an allergic reaction.", Mood.FEAR),
+                        new QuizModels.Answer("Think, \"Even with eating, I'm so cowardly.\"", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry that it will give you a stomachache.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think it looks disgusting and don't want to try it.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("你發現自己忘記了回地球的路，你的想法是？", Arrays.asList(
-                        new QuizModels.Answer("太好了，可以繼續探險！", Mood.HAPPY),
-                        new QuizModels.Answer("我可能永遠見不到家人了。", Mood.SAD),
-                        new QuizModels.Answer("氣自己為什麼這麼粗心。", Mood.ANGER),
-                        new QuizModels.Answer("完蛋了，我會在太空漂流。", Mood.FEAR),
-                        new QuizModels.Answer("我總是搞砸重要的事。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("不斷想著各種可怕的後果。", Mood.ANXIETY),
-                        new QuizModels.Answer("討厭這種失控的感覺。", Mood.DISGUST)
+                new QuizModels.Question("You realize you've forgotten the way back to Earth. Your thought is...", Arrays.asList(
+                        new QuizModels.Answer("Great! I can keep exploring!", Mood.HAPPY),
+                        new QuizModels.Answer("I might never see my family again.", Mood.SAD),
+                        new QuizModels.Answer("Get angry at yourself for being so careless.", Mood.ANGER),
+                        new QuizModels.Answer("It's over; I'll be drifting in space.", Mood.FEAR),
+                        new QuizModels.Answer("I always mess up important things.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Keep thinking about various terrible consequences.", Mood.ANXIETY),
+                        new QuizModels.Answer("Hate this feeling of losing control.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("外星朋友想學習地球的遊戲，你會？", Arrays.asList(
-                        new QuizModels.Answer("開心地教它們玩躲貓貓。", Mood.HAPPY),
-                        new QuizModels.Answer("玩的時候有點想家。", Mood.SAD),
-                        new QuizModels.Answer("它們老是學不會，真讓人生氣。", Mood.ANGER),
-                        new QuizModels.Answer("怕它們不喜歡地球的遊戲。", Mood.FEAR),
-                        new QuizModels.Answer("我解釋得一點都不清楚。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心遊戲規則太複雜。", Mood.ANXIETY),
-                        new QuizModels.Answer("不想和它們分享地球的事。", Mood.DISGUST)
+                new QuizModels.Question("Your alien friends want to learn an Earth game. You...", Arrays.asList(
+                        new QuizModels.Answer("Happily teach them how to play hide-and-seek.", Mood.HAPPY),
+                        new QuizModels.Answer("Feel a bit homesick while playing.", Mood.SAD),
+                        new QuizModels.Answer("Get angry because they can't seem to learn it.", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid they won't like Earth games.", Mood.FEAR),
+                        new QuizModels.Answer("Think my explanation isn't clear at all.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry that the game rules are too complicated.", Mood.ANXIETY),
+                        new QuizModels.Answer("Don't want to share things about Earth with them.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("任務結束，你被當成英雄歡迎，你覺得？", Arrays.asList(
-                        new QuizModels.Answer("真是太光榮了！", Mood.HAPPY),
-                        new QuizModels.Answer("熱鬧過後，感覺空虛。", Mood.SAD),
-                        new QuizModels.Answer("他們根本不了解真正的過程。", Mood.ANGER),
-                        new QuizModels.Answer("怕大家對我期望太高。", Mood.FEAR),
-                        new QuizModels.Answer("我根本不是真正的英雄。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心下次做不到這麼好。", Mood.ANXIETY),
-                        new QuizModels.Answer("厭倦了這些虛偽的歡迎。", Mood.DISGUST)
+                new QuizModels.Question("The mission is over, and you are welcomed as a hero. You feel...", Arrays.asList(
+                        new QuizModels.Answer("This is such an honor!", Mood.HAPPY),
+                        new QuizModels.Answer("Empty after all the excitement dies down.", Mood.SAD),
+                        new QuizModels.Answer("That they don't understand what really happened.", Mood.ANGER),
+                        new QuizModels.Answer("Afraid that people's expectations of you are now too high.", Mood.FEAR),
+                        new QuizModels.Answer("That I'm not a real hero.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worried that you can't perform this well next time.", Mood.ANXIETY),
+                        new QuizModels.Answer("Tired of these hypocritical welcomes.", Mood.DISGUST)
                 ))
         );
         return new StoryTheme(title, story, questions);
     }
 
     private static StoryTheme createTheme3() {
-        String title = "海底王國之旅";
-        String story = "你變成一條小魚，游進神秘海底王國，那裡有會說話的珊瑚和閃亮珍珠！";
+        String title = "Journey to the Underwater Kingdom";
+        String story = "You turn into a little fish and swim into a mysterious underwater kingdom, where there are talking corals and shining pearls!";
         List<QuizModels.Question> questions = Arrays.asList(
-                new QuizModels.Question("當海豚邀請你賽跑時，你會？", Arrays.asList(
-                        new QuizModels.Answer("太好玩了！我一定能贏！", Mood.HAPPY),
-                        new QuizModels.Answer("牠會不會是因為孤單才找我？", Mood.SAD),
-                        new QuizModels.Answer("為什麼牠一副比我快的樣子？", Mood.ANGER),
-                        new QuizModels.Answer("怕游太快會撞到東西。", Mood.FEAR),
-                        new QuizModels.Answer("我游得太難看，不敢比。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心比賽中途會抽筋。", Mood.ANXIETY),
-                        new QuizModels.Answer("不想在渾濁的水裡比賽。", Mood.DISGUST)
+                new QuizModels.Question("When a dolphin challenges you to a race, you...", Arrays.asList(
+                        new QuizModels.Answer("Think it's so fun! I can definitely win!", Mood.HAPPY),
+                        new QuizModels.Answer("Wonder if it asked me because it's lonely?", Mood.SAD),
+                        new QuizModels.Answer("Wonder why it acts like it's faster than me?", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid of swimming too fast and hitting something.", Mood.FEAR),
+                        new QuizModels.Answer("Think I swim too awkwardly and don't dare to race.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry about getting a cramp mid-race.", Mood.ANXIETY),
+                        new QuizModels.Answer("Don't want to race in the murky water.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("你看到發光水母在跳舞，你的反應是？", Arrays.asList(
-                        new QuizModels.Answer("驚喜地加入它們的舞會！", Mood.HAPPY),
-                        new QuizModels.Answer("它們的光讓我感到寂寞。", Mood.SAD),
-                        new QuizModels.Answer("光太刺眼了，真不舒服。", Mood.ANGER),
-                        new QuizModels.Answer("怕被水母螫到。", Mood.FEAR),
-                        new QuizModels.Answer("我的舞姿一定很難看。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("靠太近會不會有危險？", Mood.ANXIETY),
-                        new QuizModels.Answer("它們看起來滑溜溜的，真噁心。", Mood.DISGUST)
+                new QuizModels.Question("You see glowing jellyfish dancing. Your reaction is to...", Arrays.asList(
+                        new QuizModels.Answer("Surprisingly join their dance party!", Mood.HAPPY),
+                        new QuizModels.Answer("Feel their light makes me feel lonely.", Mood.SAD),
+                        new QuizModels.Answer("Think the light is too glaring, it's uncomfortable.", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid of being stung.", Mood.FEAR),
+                        new QuizModels.Answer("Think my dance moves must look terrible.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry if getting too close is dangerous.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think they look slimy and disgusting.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("章魚送你一個泡泡禮物，你會？", Arrays.asList(
-                        new QuizModels.Answer("開心收下，覺得好特別！", Mood.HAPPY),
-                        new QuizModels.Answer("泡泡總會破掉，像美夢一樣。", Mood.SAD),
-                        new QuizModels.Answer("為什麼送這麼容易破的東西？", Mood.ANGER),
-                        new QuizModels.Answer("怕泡泡裡面有怪東西。", Mood.FEAR),
-                        new QuizModels.Answer("我不配收到禮物。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心弄破它會讓章魚不高興。", Mood.ANXIETY),
-                        new QuizModels.Answer("泡泡有腥味，我不喜歡。", Mood.DISGUST)
+                new QuizModels.Question("An octopus gives you a bubble gift. You...", Arrays.asList(
+                        new QuizModels.Answer("Happily accept it, thinking it's so special!", Mood.HAPPY),
+                        new QuizModels.Answer("Think bubbles will always pop, just like beautiful dreams.", Mood.SAD),
+                        new QuizModels.Answer("Wonder why it gave me something so fragile?", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid there might be something strange inside the bubble.", Mood.FEAR),
+                        new QuizModels.Answer("Think I don't deserve gifts.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry that popping it will upset the octopus.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the bubble smells fishy; I don't like it.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("海底城堡的大門關著，你會？", Arrays.asList(
-                        new QuizModels.Answer("興奮地敲門，期待誰來開門！", Mood.HAPPY),
-                        new QuizModels.Answer("門關著，感覺自己被拒絕了。", Mood.SAD),
-                        new QuizModels.Answer("誰把門關起來？真可惡！", Mood.ANGER),
-                        new QuizModels.Answer("怕門後有可怕的守衛。", Mood.FEAR),
-                        new QuizModels.Answer("我這種小魚不配進去。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("猶豫要不要按門鈴。", Mood.ANXIETY),
-                        new QuizModels.Answer("門上都是藻類，真髒。", Mood.DISGUST)
+                new QuizModels.Question("The gate to the underwater castle is closed. You...", Arrays.asList(
+                        new QuizModels.Answer("Excitedly knock, wondering who will open it!", Mood.HAPPY),
+                        new QuizModels.Answer("Feel rejected with the gate closed.", Mood.SAD),
+                        new QuizModels.Answer("Think, \"Who closed the gate? How awful!\"", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid there are scary guards behind the door.", Mood.FEAR),
+                        new QuizModels.Answer("Think a small fish like me doesn't deserve to enter.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Hesitate about whether to ring the doorbell.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the gate is covered in algae; it's so dirty.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("鯨魚唱起搖籃曲，你的感覺是？", Arrays.asList(
-                        new QuizModels.Answer("好好聽，感覺好幸福！", Mood.HAPPY),
-                        new QuizModels.Answer("歌聲讓我想媽媽了。", Mood.SAD),
-                        new QuizModels.Answer("聲音太大了，好吵！", Mood.ANGER),
-                        new QuizModels.Answer("怕巨大的聲音會震傷我。", Mood.FEAR),
-                        new QuizModels.Answer("我永遠唱不了這麼好。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心鯨魚是不是在求救？", Mood.ANXIETY),
-                        new QuizModels.Answer("不喜歡這種低沉的共鳴。", Mood.DISGUST)
+                new QuizModels.Question("A whale sings a lullaby. You feel...", Arrays.asList(
+                        new QuizModels.Answer("It sounds so beautiful! I feel so happy!", Mood.HAPPY),
+                        new QuizModels.Answer("The song makes me miss my mom.", Mood.SAD),
+                        new QuizModels.Answer("The sound is too loud! So noisy!", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid the huge sound might injure me.", Mood.FEAR),
+                        new QuizModels.Answer("I could never sing that well.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry if the whale is calling for help?", Mood.ANXIETY),
+                        new QuizModels.Answer("Dislike this low, vibrating resonance.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("旅程結束，你變回人類，你的想法是？", Arrays.asList(
-                        new QuizModels.Answer("海底世界真是太美妙了！", Mood.HAPPY),
-                        new QuizModels.Answer("捨不得離開魚兒朋友。", Mood.SAD),
-                        new QuizModels.Answer("氣自己沒多撿些珍珠。", Mood.ANGER),
-                        new QuizModels.Answer("怕剛才的經歷只是一場夢。", Mood.FEAR),
-                        new QuizModels.Answer("我還是當人類比較習慣。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心海洋會不會被污染。", Mood.ANXIETY),
-                        new QuizModels.Answer("全身濕黏的感覺真不舒服。", Mood.DISGUST)
+                new QuizModels.Question("The journey ends, and you turn back into a human. You think...", Arrays.asList(
+                        new QuizModels.Answer("The underwater world was truly amazing!", Mood.HAPPY),
+                        new QuizModels.Answer("Are reluctant to leave your fish friends.", Mood.SAD),
+                        new QuizModels.Answer("Are angry you didn't collect more pearls.", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid the experience was just a dream.", Mood.FEAR),
+                        new QuizModels.Answer("That I'm more used to being a human.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry about the ocean being polluted.", Mood.ANXIETY),
+                        new QuizModels.Answer("That the feeling of being wet and sticky is really uncomfortable.", Mood.DISGUST)
                 ))
         );
         return new StoryTheme(title, story, questions);
     }
 
-    // ... The other themes (4, 5, 6, 7) are added similarly
-    // Due to length, I'll show the pattern and you can fill in the rest.
-    // Let's add Theme 4 as a final example.
-
     private static StoryTheme createTheme4() {
-        String title = "雲端城堡探險";
-        String story = "你乘著氣球飛到雲端城堡，那裡有棉花糖雲和會笑的太陽，一切都輕飄飄的！";
+        String title = "Cloud Castle Adventure";
+        String story = "You fly to a castle in the clouds on a balloon! There are cotton candy clouds and a laughing sun; everything is soft and floaty!";
         List<QuizModels.Question> questions = Arrays.asList(
-                new QuizModels.Question("當雲朵變成軟綿綿的床，你會？", Arrays.asList(
-                        new QuizModels.Answer("高興地在上面彈跳！", Mood.HAPPY),
-                        new QuizModels.Answer("這麼舒服，卻只能短暫享受。", Mood.SAD),
-                        new QuizModels.Answer("為什麼雲床這麼不牢固？", Mood.ANGER),
-                        new QuizModels.Answer("怕會從雲縫中掉下去。", Mood.FEAR),
-                        new QuizModels.Answer("我不該弄髒這麼白的雲。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心把雲床壓垮了。", Mood.ANXIETY),
-                        new QuizModels.Answer("雲濕濕的，我不喜歡。", Mood.DISGUST)
+                new QuizModels.Question("When a cloud turns into a soft bed, you...", Arrays.asList(
+                        new QuizModels.Answer("Happily bounce on it!", Mood.HAPPY),
+                        new QuizModels.Answer("Feel sad that you can only enjoy such comfort briefly.", Mood.SAD),
+                        new QuizModels.Answer("Wonder why the cloud bed is so unstable?", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid you might fall through a gap in the clouds.", Mood.FEAR),
+                        new QuizModels.Answer("Think I shouldn't dirty such a white cloud.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry about collapsing the cloud bed.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the cloud is damp; I don't like it.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("太陽對你眨眼睛，你的反應是？", Arrays.asList(
-                        new QuizModels.Answer("驚喜地也對它眨眨眼！", Mood.HAPPY),
-                        new QuizModels.Answer("它一個人在天上，好孤單。", Mood.SAD),
-                        new QuizModels.Answer("光太強了，眼睛好痛！", Mood.ANGER),
-                        new QuizModels.Answer("怕被它的熱度燒傷。", Mood.FEAR),
-                        new QuizModels.Answer("我這麼平凡，它為什麼看我？", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("一直眨眼是不是有壞事發生？", Mood.ANXIETY),
-                        new QuizModels.Answer("不喜歡這種被盯著的感覺。", Mood.DISGUST)
+                new QuizModels.Question("The sun blinks at you. Your reaction is to...", Arrays.asList(
+                        new QuizModels.Answer("Surprised, blink back at it!", Mood.HAPPY),
+                        new QuizModels.Answer("It must be lonely up there all by itself.", Mood.SAD),
+                        new QuizModels.Answer("The light is too strong! My eyes hurt!", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid of getting burned by its heat.", Mood.FEAR),
+                        new QuizModels.Answer("Why is it looking at someone as ordinary as me?", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Is it blinking because something bad is going to happen?", Mood.ANXIETY),
+                        new QuizModels.Answer("Dislike this feeling of being watched.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("你找到彩虹滑梯，你會？", Arrays.asList(
-                        new QuizModels.Answer("太刺激了！我要滑一遍又一遍！", Mood.HAPPY),
-                        new QuizModels.Answer("彩虹這麼美，消失了好可惜。", Mood.SAD),
-                        new QuizModels.Answer("為什麼滑梯這麼陡？", Mood.ANGER),
-                        new QuizModels.Answer("怕滑出去會飛到外太空。", Mood.FEAR),
-                        new QuizModels.Answer("我這麼重，會不會壓壞彩虹？", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("猶豫要不要滑，怕有危險。", Mood.ANXIETY),
-                        new QuizModels.Answer("不想弄濕自己的衣服。", Mood.DISGUST)
+                new QuizModels.Question("You find a rainbow slide. You...", Arrays.asList(
+                        new QuizModels.Answer("Think it's so exciting! I'll slide down again and again!", Mood.HAPPY),
+                        new QuizModels.Answer("Feel it's a pity such a beautiful rainbow will disappear.", Mood.SAD),
+                        new QuizModels.Answer("Wonder why the slide is so steep?", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid you'll slide right off into outer space.", Mood.FEAR),
+                        new QuizModels.Answer("Think I'm too heavy; will I crush the rainbow?", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Hesitate to slide, fearing danger.", Mood.ANXIETY),
+                        new QuizModels.Answer("Don't want to get your clothes wet.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("風兒帶你飛高高，你的感覺是？", Arrays.asList(
-                        new QuizModels.Answer("飛翔的感覺太自由了！", Mood.HAPPY),
-                        new QuizModels.Answer("飛得再高，最後還是要下來。", Mood.SAD),
-                        new QuizModels.Answer("風太大，吹得我頭好亂！", Mood.ANGER),
-                        new QuizModels.Answer("怕風突然停下來。", Mood.FEAR),
-                        new QuizModels.Answer("我控制不好飛行方向。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心會撞到小鳥或飛機。", Mood.ANXIETY),
-                        new QuizModels.Answer("風中有沙子，好討厭。", Mood.DISGUST)
+                new QuizModels.Question("The wind carries you high up. You feel...", Arrays.asList(
+                        new QuizModels.Answer("The feeling of flying is so freeing!", Mood.HAPPY),
+                        new QuizModels.Answer("No matter how high you fly, you still have to come down eventually.", Mood.SAD),
+                        new QuizModels.Answer("The wind is too strong; it's messing up my hair!", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid the wind might suddenly stop.", Mood.FEAR),
+                        new QuizModels.Answer("I can't control the flying direction well.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry about hitting a bird or a plane.", Mood.ANXIETY),
+                        new QuizModels.Answer("There's sand in the wind; I hate it.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("城堡門前有謎語，你會？", Arrays.asList(
-                        new QuizModels.Answer("真有趣，我喜歡動腦筋！", Mood.HAPPY),
-                        new QuizModels.Answer("答錯了會不會永遠被關在外面？", Mood.SAD),
-                        new QuizModels.Answer("誰出的這麼難的題目！", Mood.ANGER),
-                        new QuizModels.Answer("怕答錯會被懲罰。", Mood.FEAR),
-                        new QuizModels.Answer("我這麼笨，一定猜不出。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("萬一只有一次機會怎麼辦？", Mood.ANXIETY),
-                        new QuizModels.Answer("覺得猜謎遊戲很無聊。", Mood.DISGUST)
+                new QuizModels.Question("There is a riddle in front of the castle gate. You...", Arrays.asList(
+                        new QuizModels.Answer("Think it's fun! I like using my brain!", Mood.HAPPY),
+                        new QuizModels.Answer("Think, \"If I get it wrong, will I be locked out forever?\"", Mood.SAD),
+                        new QuizModels.Answer("Think, \"Who came up with such a hard question!\"", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid of being punished for a wrong answer.", Mood.FEAR),
+                        new QuizModels.Answer("Think I'm too stupid to figure it out.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry, \"What if I only have one chance?\"", Mood.ANXIETY),
+                        new QuizModels.Answer("Find riddle games boring.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("離開時，雲朵送你禮物，你會？", Arrays.asList(
-                        new QuizModels.Answer("謝謝你！我會好好珍惜！", Mood.HAPPY),
-                        new QuizModels.Answer("收到禮物，卻要說再見了。", Mood.SAD),
-                        new QuizModels.Answer("為什麼不送更好一點的東西？", Mood.ANGER),
-                        new QuizModels.Answer("怕禮物在回家路上消失。", Mood.FEAR),
-                        new QuizModels.Answer("我不配收下這麼好的禮物。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心禮物會不會有代價？", Mood.ANXIETY),
-                        new QuizModels.Answer("雲的禮物不過是水蒸氣罷了。", Mood.DISGUST)
+                new QuizModels.Question("As you leave, the clouds give you a gift. You...", Arrays.asList(
+                        new QuizModels.Answer("Say, \"Thank you! I will treasure it!\"", Mood.HAPPY),
+                        new QuizModels.Answer("Feel sad to receive a gift but have to say goodbye.", Mood.SAD),
+                        new QuizModels.Answer("Wonder why they didn't give something better?", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid the gift will disappear on the way home.", Mood.FEAR),
+                        new QuizModels.Answer("Think I don't deserve such a nice gift.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry if the gift comes with a price?", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the cloud's gift is just water vapor.", Mood.DISGUST)
                 ))
         );
         return new StoryTheme(title, story, questions);
     }
 
     private static StoryTheme createTheme5() {
-        String title = "動物嘉年華";
-        String story = "你被邀請到動物嘉年華，獅子會跳舞，猴子會變魔術，大家一起開派對！";
+        String title = "Animal Carnival";
+        String story = "You are invited to an animal carnival! The lion can dance, the monkey can do magic, and everyone is having a party together!";
         List<QuizModels.Question> questions = Arrays.asList(
-                new QuizModels.Question("當獅子邀請你跳舞時，你會？", Arrays.asList(
-                        new QuizModels.Answer("太榮幸了！馬上一起跳！", Mood.HAPPY),
-                        new QuizModels.Answer("牠的舞步看起來有點悲傷。", Mood.SAD),
-                        new QuizModels.Answer("牠的吼聲好大，真不舒服！", Mood.ANGER),
-                        new QuizModels.Answer("怕牠不小心踩到我。", Mood.FEAR),
-                        new QuizModels.Answer("我跳得不好，會害牠丟臉。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("緊張地想著舞步。", Mood.ANXIETY),
-                        new QuizModels.Answer("不喜歡牠身上的味道。", Mood.DISGUST)
+                new QuizModels.Question("When the lion invites you to dance, you...", Arrays.asList(
+                        new QuizModels.Answer("Feel so honored! Start dancing with it immediately!", Mood.HAPPY),
+                        new QuizModels.Answer("Think its dance moves look a bit sad.", Mood.SAD),
+                        new QuizModels.Answer("Think its roar is too loud! It's uncomfortable!", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid it might accidentally step on you.", Mood.FEAR),
+                        new QuizModels.Answer("Think I don't dance well and will embarrass it.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Nervously think about the dance steps.", Mood.ANXIETY),
+                        new QuizModels.Answer("Dislike its smell.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("猴子變出彩色氣球，你的反應是？", Arrays.asList(
-                        new QuizModels.Answer("驚喜地拍手叫好！", Mood.HAPPY),
-                        new QuizModels.Answer("氣球破了的話，猴子會難過吧。", Mood.SAD),
-                        new QuizModels.Answer("只是氣球而已，沒什麼了不起。", Mood.ANGER),
-                        new QuizModels.Answer("怕氣球突然爆炸。", Mood.FEAR),
-                        new QuizModels.Answer("我連一個氣球都變不出來。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心氣球會被樹枝刺破。", Mood.ANXIETY),
-                        new QuizModels.Answer("氣球的橡膠味好難聞。", Mood.DISGUST)
+                new QuizModels.Question("The monkey conjures colorful balloons. Your reaction is to...", Arrays.asList(
+                        new QuizModels.Answer("Be surprised and clap cheerfully!", Mood.HAPPY),
+                        new QuizModels.Answer("Think the monkey would be sad if the balloons popped.", Mood.SAD),
+                        new QuizModels.Answer("Think, \"They're just balloons, no big deal.\"", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid the balloons will suddenly pop.", Mood.FEAR),
+                        new QuizModels.Answer("Think I can't even conjure one balloon.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry the balloons will be popped by tree branches.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the rubber smell of the balloons is awful.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("你被選為派對隊長，你會？", Arrays.asList(
-                        new QuizModels.Answer("太好了！我來帶大家玩遊戲！", Mood.HAPPY),
-                        new QuizModels.Answer("當隊長意味著要承擔責任。", Mood.SAD),
-                        new QuizModels.Answer("為什麼我要做這麼多事？", Mood.ANGER),
-                        new QuizModels.Answer("怕大家不聽我的指揮。", Mood.FEAR),
-                        new QuizModels.Answer("我沒有領導能力。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心把派對搞砸。", Mood.ANXIETY),
-                        new QuizModels.Answer("真麻煩，我不想管別人。", Mood.DISGUST)
+                new QuizModels.Question("You are chosen to be the party leader. You...", Arrays.asList(
+                        new QuizModels.Answer("Think, \"Great! I'll lead everyone in games!\"", Mood.HAPPY),
+                        new QuizModels.Answer("Feel that being the leader means taking on responsibility.", Mood.SAD),
+                        new QuizModels.Answer("Wonder, \"Why do I have to do so much?\"", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid no one will listen to you.", Mood.FEAR),
+                        new QuizModels.Answer("Think I have no leadership skills.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry about messing up the party.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think it's troublesome; I don't want to manage others.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("食物桌有奇怪形狀點心，你會？", Arrays.asList(
-                        new QuizModels.Answer("造型好酷！我要嘗一口！", Mood.HAPPY),
-                        new QuizModels.Answer("做得這麼精緻，捨不得吃。", Mood.SAD),
-                        new QuizModels.Answer("為什麼不做成正常樣子？", Mood.ANGER),
-                        new QuizModels.Answer("怕點心味道很奇怪。", Mood.FEAR),
-                        new QuizModels.Answer("連吃東西我都這麼膽小。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心點心會不會過期？", Mood.ANXIETY),
-                        new QuizModels.Answer("顏色太鮮豔，感覺有好多色素。", Mood.DISGUST)
+                new QuizModels.Question("The food table has snacks with weird shapes. You...", Arrays.asList(
+                        new QuizModels.Answer("Think the shapes are so cool! I'll take a bite!", Mood.HAPPY),
+                        new QuizModels.Answer("Feel they are made so exquisitely, it's a shame to eat them.", Mood.SAD),
+                        new QuizModels.Answer("Wonder why they aren't made in normal shapes?", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid the snacks will taste strange.", Mood.FEAR),
+                        new QuizModels.Answer("Think, \"Even with eating, I'm so cowardly.\"", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry if the snacks might be expired?", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the colors are too bright; they must have a lot of artificial coloring.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("大象用鼻子噴水玩，你的感覺是？", Arrays.asList(
-                        new QuizModels.Answer("哈哈，好像淋浴一樣好玩！", Mood.HAPPY),
-                        new QuizModels.Answer("水噴到眼睛，有點想哭。", Mood.SAD),
-                        new QuizModels.Answer("我衣服都濕了，真生氣！", Mood.ANGER),
-                        new QuizModels.Answer("怕被強力水柱沖倒。", Mood.FEAR),
-                        new QuizModels.Answer("我潑水都沒牠這麼厲害。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心鼻子裡的水不乾淨。", Mood.ANXIETY),
-                        new QuizModels.Answer("鼻涕和水混在一起，真噁心。", Mood.DISGUST)
+                new QuizModels.Question("The elephant plays by spraying water with its trunk. You feel...", Arrays.asList(
+                        new QuizModels.Answer("Haha, it's as fun as a shower!", Mood.HAPPY),
+                        new QuizModels.Answer("Feel like crying when the water gets in your eyes.", Mood.SAD),
+                        new QuizModels.Answer("Get angry because your clothes are all wet!", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid of being knocked over by the powerful water jet.", Mood.FEAR),
+                        new QuizModels.Answer("Think I'm not as good at splashing water as it is.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry if the water in its trunk is clean.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the mix of snot and water is disgusting.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("派對結束時，動物們擁抱你，你會？", Arrays.asList(
-                        new QuizModels.Answer("開心擁抱，約定下次再見！", Mood.HAPPY),
-                        new QuizModels.Answer("擁抱時感到離別的難過。", Mood.SAD),
-                        new QuizModels.Answer("別抱這麼緊，我不喜歡！", Mood.ANGER),
-                        new QuizModels.Answer("怕牠們的爪子會抓傷我。", Mood.FEAR),
-                        new QuizModels.Answer("我值得牠們這麼喜歡嗎？", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心自己身上有汗味。", Mood.ANXIETY),
-                        new QuizModels.Answer("牠們毛好多，感覺會過敏。", Mood.DISGUST)
+                new QuizModels.Question("When the party ends, the animals hug you. You...", Arrays.asList(
+                        new QuizModels.Answer("Happily hug them back, promising to meet again!", Mood.HAPPY),
+                        new QuizModels.Answer("Feel the sadness of parting during the hug.", Mood.SAD),
+                        new QuizModels.Answer("Think, \"Don't hug so tight, I don't like it!\"", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid their claws might scratch you.", Mood.FEAR),
+                        new QuizModels.Answer("Wonder, \"Do I deserve their affection?\"", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry you might have body odor.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think they have too much fur; it feels like it will cause allergies.", Mood.DISGUST)
                 ))
         );
         return new StoryTheme(title, story, questions);
     }
 
     private static StoryTheme createTheme6() {
-        String title = "時光機器之旅";
-        String story = "你坐進時光機器，穿越到恐龍時代和未來城市，見證不可思議的奇蹟！";
+        String title = "Time Machine Journey";
+        String story = "You get into a time machine, traveling to the age of dinosaurs and future cities, witnessing incredible miracles!";
         List<QuizModels.Question> questions = Arrays.asList(
-                new QuizModels.Question("當你看到真實恐龍時，你的反應是？", Arrays.asList(
-                        new QuizModels.Answer("太壯觀了！夢想成真！", Mood.HAPPY),
-                        new QuizModels.Answer("牠們後來滅絕了，好可憐。", Mood.SAD),
-                        new QuizModels.Answer("牠們叫聲好大，真吵！", Mood.ANGER),
-                        new QuizModels.Answer("怕被恐龍當成食物。", Mood.FEAR),
-                        new QuizModels.Answer("在牠們面前，我太渺小了。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心機器失靈，回不去了。", Mood.ANXIETY),
-                        new QuizModels.Answer("周圍的氣味好難聞。", Mood.DISGUST)
+                new QuizModels.Question("When you see a real dinosaur, your reaction is...", Arrays.asList(
+                        new QuizModels.Answer("So magnificent! A dream come true!", Mood.HAPPY),
+                        new QuizModels.Answer("They went extinct later; how sad.", Mood.SAD),
+                        new QuizModels.Answer("Their calls are so loud! So noisy!", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid of being eaten.", Mood.FEAR),
+                        new QuizModels.Answer("Feel so insignificant in front of them.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry the machine will malfunction, and you can't return.", Mood.ANXIETY),
+                        new QuizModels.Answer("The smell here is awful.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("未來機器人送你高科技玩具，你會？", Arrays.asList(
-                        new QuizModels.Answer("太好了！這玩具好先進！", Mood.HAPPY),
-                        new QuizModels.Answer("未來的小孩真幸福，我有點嫉妒。", Mood.SAD),
-                        new QuizModels.Answer("為什麼不送更實用的東西？", Mood.ANGER),
-                        new QuizModels.Answer("怕玩具會有雷射傷害我。", Mood.FEAR),
-                        new QuizModels.Answer("我連說明書都看不懂。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心弄壞這麼貴重的禮物。", Mood.ANXIETY),
-                        new QuizModels.Answer("金屬玩具冷冰冰的，不喜歡。", Mood.DISGUST)
+                new QuizModels.Question("A future robot gives you a high-tech toy. You...", Arrays.asList(
+                        new QuizModels.Answer("Think, \"Great! This toy is so advanced!\"", Mood.HAPPY),
+                        new QuizModels.Answer("Feel a bit jealous that future children are so fortunate.", Mood.SAD),
+                        new QuizModels.Answer("Wonder why it didn't give something more practical?", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid the toy might have lasers that hurt you.", Mood.FEAR),
+                        new QuizModels.Answer("Think I can't even understand the manual.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry about breaking such an expensive gift.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think metal toys are cold and unfeeling; I don't like them.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("時光機器晃動一下，你會？", Arrays.asList(
-                        new QuizModels.Answer("好像坐雲霄飛車，真刺激！", Mood.HAPPY),
-                        new QuizModels.Answer("如果時光旅行是夢，我會失望。", Mood.SAD),
-                        new QuizModels.Answer("誰發明的爛機器！", Mood.ANGER),
-                        new QuizModels.Answer("怕機器故障，卡在時空裡。", Mood.FEAR),
-                        new QuizModels.Answer("都是我亂按鈕的錯。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("緊張地檢查所有儀表。", Mood.ANXIETY),
-                        new QuizModels.Answer("晃動讓我頭暈想吐。", Mood.DISGUST)
+                new QuizModels.Question("The time machine shakes suddenly. You...", Arrays.asList(
+                        new QuizModels.Answer("Think it's like a roller coaster, so thrilling!", Mood.HAPPY),
+                        new QuizModels.Answer("Would be disappointed if time travel was just a dream.", Mood.SAD),
+                        new QuizModels.Answer("Think, \"Who invented this piece of junk!\"", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid the machine will break down, trapping you in time.", Mood.FEAR),
+                        new QuizModels.Answer("Think it's my fault for pressing buttons randomly.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Nervously check all the gauges.", Mood.ANXIETY),
+                        new QuizModels.Answer("Feel the shaking makes you dizzy and nauseous.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("你遇到古代公主，她問你的世界，你會？", Arrays.asList(
-                        new QuizModels.Answer("興奮地分享所有新奇事物！", Mood.HAPPY),
-                        new QuizModels.Answer("她永遠看不到這些，真可惜。", Mood.SAD),
-                        new QuizModels.Answer("她問題好多，有點煩。", Mood.ANGER),
-                        new QuizModels.Answer("怕說錯話改變歷史。", Mood.FEAR),
-                        new QuizModels.Answer("我的故事太平凡了。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心她聽不懂我的話。", Mood.ANXIETY),
-                        new QuizModels.Answer("不想跟她解釋這麼多。", Mood.DISGUST)
+                new QuizModels.Question("You meet an ancient princess who asks about your world. You...", Arrays.asList(
+                        new QuizModels.Answer("Excitedly share all the novelties!", Mood.HAPPY),
+                        new QuizModels.Answer("Feel it's a pity she will never see these things.", Mood.SAD),
+                        new QuizModels.Answer("Find her questions too numerous and annoying.", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid of saying the wrong thing and changing history.", Mood.FEAR),
+                        new QuizModels.Answer("Think my stories are too mundane.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry she won't understand what you're saying.", Mood.ANXIETY),
+                        new QuizModels.Answer("Don't want to explain so much to her.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("未來城市車子會飛，你的感覺是？", Arrays.asList(
-                        new QuizModels.Answer("好方便！我也想試著開！", Mood.HAPPY),
-                        new QuizModels.Answer("對比現在，交通真糟糕。", Mood.SAD),
-                        new QuizModels.Answer("滿天都是車，好亂！", Mood.ANGER),
-                        new QuizModels.Answer("怕車子會從天上掉下來。", Mood.FEAR),
-                        new QuizModels.Answer("我學不會操作這種車。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心空中交通規則太複雜。", Mood.ANXIETY),
-                        new QuizModels.Answer("排放的廢氣味道真怪。", Mood.DISGUST)
+                new QuizModels.Question("In the future city, the cars can fly. You feel...", Arrays.asList(
+                        new QuizModels.Answer("So convenient! I want to try driving one!", Mood.HAPPY),
+                        new QuizModels.Answer("Compared to now, the traffic is really terrible.", Mood.SAD),
+                        new QuizModels.Answer("The sky is full of cars; what a mess!", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid the cars might fall from the sky.", Mood.FEAR),
+                        new QuizModels.Answer("Think I could never learn to operate this kind of car.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry the aerial traffic rules are too complicated.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the exhaust fumes smell really weird.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("回家後，你對這次旅行怎麼想？", Arrays.asList(
-                        new QuizModels.Answer("真是最棒的冒險！", Mood.HAPPY),
-                        new QuizModels.Answer("回到平凡生活，有點失落。", Mood.SAD),
-                        new QuizModels.Answer("氣自己沒多看幾個時代。", Mood.ANGER),
-                        new QuizModels.Answer("怕時空旅行會有後遺症。", Mood.FEAR),
-                        new QuizModels.Answer("我不配擁有這樣的經歷。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心自己是否回到了正確的時間線。", Mood.ANXIETY),
-                        new QuizModels.Answer("旅行讓我好累，真不舒服。", Mood.DISGUST)
+                new QuizModels.Question("After returning home, what do you think about this trip?", Arrays.asList(
+                        new QuizModels.Answer("It was the best adventure!", Mood.HAPPY),
+                        new QuizModels.Answer("Feel a bit失落 returning to ordinary life.", Mood.SAD), // Note: Chinese character in source, assuming it means 'lost' or 'dejected'
+                        new QuizModels.Answer("Are angry you didn't visit more eras.", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid time travel might have side effects.", Mood.FEAR),
+                        new QuizModels.Answer("Think I don't deserve such an experience.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry if you returned to the correct timeline.", Mood.ANXIETY),
+                        new QuizModels.Answer("Feel the trip was exhausting and uncomfortable.", Mood.DISGUST)
                 ))
         );
         return new StoryTheme(title, story, questions);
     }
 
     private static StoryTheme createTheme7() {
-        String title = "秘密花園挑戰";
-        String story = "你發現一個隱藏花園，裡面有會說話的花和迷宮，每關都有小驚喜等你！";
+        String title = "Secret Garden Challenge";
+        String story = "You discover a hidden garden with talking flowers and a maze; each challenge holds a little surprise waiting for you!";
         List<QuizModels.Question> questions = Arrays.asList(
-                new QuizModels.Question("當玫瑰花教你種花魔法時，你會？", Arrays.asList(
-                        new QuizModels.Answer("太神奇了！我要馬上試！", Mood.HAPPY),
-                        new QuizModels.Answer("魔法再厲害，花還是會凋謝。", Mood.SAD),
-                        new QuizModels.Answer("為什麼咒語這麼難念！", Mood.ANGER),
-                        new QuizModels.Answer("怕魔法會引來不好的東西。", Mood.FEAR),
-                        new QuizModels.Answer("我沒有魔法天分，學不會的。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心念錯咒語會出事。", Mood.ANXIETY),
-                        new QuizModels.Answer("魔法會弄髒我的手嗎？", Mood.DISGUST)
+                new QuizModels.Question("When a rose teaches you flower-growing magic, you...", Arrays.asList(
+                        new QuizModels.Answer("Think it's amazing! I'll try it right away!", Mood.HAPPY),
+                        new QuizModels.Answer("Think even with magic, flowers will still wither.", Mood.SAD),
+                        new QuizModels.Answer("Wonder why the spell is so hard to chant!", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid the magic might attract something bad.", Mood.FEAR),
+                        new QuizModels.Answer("Think I have no talent for magic; I won't learn it.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry that mischanting the spell will cause trouble.", Mood.ANXIETY),
+                        new QuizModels.Answer("Wonder if the magic will dirty my hands?", Mood.DISGUST)
                 )),
-                new QuizModels.Question("你走進迷宮，路徑分兩條，你會？", Arrays.asList(
-                        new QuizModels.Answer("探險開始了！隨便選一條！", Mood.HAPPY),
-                        new QuizModels.Answer("無論選哪條，都會錯過另一邊的風景。", Mood.SAD),
-                        new QuizModels.Answer("誰設計這麼複雜的迷宮！", Mood.ANGER),
-                        new QuizModels.Answer("怕在裡面迷路一整天。", Mood.FEAR),
-                        new QuizModels.Answer("我方向感很差，一定會走錯。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("猶豫不決，怕選錯路。", Mood.ANXIETY),
-                        new QuizModels.Answer("迷宮牆上都是青苔，真髒。", Mood.DISGUST)
+                new QuizModels.Question("You enter the maze, and the path splits in two. You...", Arrays.asList(
+                        new QuizModels.Answer("Think, \"The adventure begins! I'll pick one randomly!\"", Mood.HAPPY),
+                        new QuizModels.Answer("Feel that no matter which path you choose, you'll miss the scenery on the other.", Mood.SAD),
+                        new QuizModels.Answer("Think, \"Who designed such a complicated maze!\"", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid of being lost inside all day.", Mood.FEAR),
+                        new QuizModels.Answer("Think my sense of direction is poor; I'll definitely choose wrong.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Hesitate, afraid of choosing the wrong path.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the maze walls are covered in moss; so dirty.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("蝴蝶送你翅膀試飛，你會？", Arrays.asList(
-                        new QuizModels.Answer("太棒了！我可以飛了！", Mood.HAPPY),
-                        new QuizModels.Answer("飛得再高，還是要落地。", Mood.SAD),
-                        new QuizModels.Answer("翅膀為什麼這麼脆弱！", Mood.ANGER),
-                        new QuizModels.Answer("怕飛太高會摔下來。", Mood.FEAR),
-                        new QuizModels.Answer("我這麼重，翅膀撐不住我。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心不會控制飛行方向。", Mood.ANXIETY),
-                        new QuizModels.Answer("翅膀上有鱗粉，好噁心。", Mood.DISGUST)
+                new QuizModels.Question("A butterfly offers you its wings to try flying. You...", Arrays.asList(
+                        new QuizModels.Answer("Think, \"Awesome! I can fly!\"", Mood.HAPPY),
+                        new QuizModels.Answer("Think no matter how high you fly, you still have to land.", Mood.SAD),
+                        new QuizModels.Answer("Wonder why the wings are so fragile!", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid of flying too high and falling.", Mood.FEAR),
+                        new QuizModels.Answer("Think I'm too heavy; the wings can't support me.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry about not being able to control the flight direction.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the wings have scales; so gross.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("花園精靈出謎題，答對有獎，你會？", Arrays.asList(
-                        new QuizModels.Answer("真有趣！我來動動腦！", Mood.HAPPY),
-                        new QuizModels.Answer("答對了，獎品也會用完。", Mood.SAD),
-                        new QuizModels.Answer("為什麼要猜謎這麼麻煩？", Mood.ANGER),
-                        new QuizModels.Answer("怕答錯會被精靈嘲笑。", Mood.FEAR),
-                        new QuizModels.Answer("我這麼笨，一定猜不中。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心時間不夠想答案。", Mood.ANXIETY),
-                        new QuizModels.Answer("不想玩這種腦力遊戲。", Mood.DISGUST)
+                new QuizModels.Question("A garden fairy gives you a riddle; a prize for the correct answer. You...", Arrays.asList(
+                        new QuizModels.Answer("Think it's fun! I'll use my brain!", Mood.HAPPY),
+                        new QuizModels.Answer("Think even if you get it right, the prize will eventually be used up.", Mood.SAD),
+                        new QuizModels.Answer("Wonder why guessing riddles is so troublesome?", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid of being laughed at by the fairy for a wrong answer.", Mood.FEAR),
+                        new QuizModels.Answer("Think I'm too stupid to guess correctly.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry there isn't enough time to think of an answer.", Mood.ANXIETY),
+                        new QuizModels.Answer("Don't want to play this kind of brain game.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("天氣突然下雨，花朵撐葉子傘，你會？", Arrays.asList(
-                        new QuizModels.Answer("在雨中跳舞真好玩！", Mood.HAPPY),
-                        new QuizModels.Answer("下雨天，心情也憂鬱起來。", Mood.SAD),
-                        new QuizModels.Answer("氣天氣破壞了我的探險！", Mood.ANGER),
-                        new QuizModels.Answer("怕會打雷或淋濕生病。", Mood.FEAR),
-                        new QuizModels.Answer("我連天氣都預測不了。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心葉子傘會不會漏雨。", Mood.ANXIETY),
-                        new QuizModels.Answer("雨水弄髒了我的鞋子。", Mood.DISGUST)
+                new QuizModels.Question("It suddenly starts raining, and the flowers hold leaf-umbrellas for you. You...", Arrays.asList(
+                        new QuizModels.Answer("Think dancing in the rain is so fun!", Mood.HAPPY),
+                        new QuizModels.Answer("Feel your mood becomes gloomy on rainy days.", Mood.SAD),
+                        new QuizModels.Answer("Get angry that the weather ruined your exploration!", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid of thunder or getting sick from the rain.", Mood.FEAR),
+                        new QuizModels.Answer("Think I can't even predict the weather.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry if the leaf-umbrella will leak.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the rain has dirtied my shoes.", Mood.DISGUST)
                 )),
-                new QuizModels.Question("挑戰成功，花園送你種子，你會？", Arrays.asList(
-                        new QuizModels.Answer("謝謝！我會讓它開出最美的花！", Mood.HAPPY),
-                        new QuizModels.Answer("種子能發芽，但我可能照顧不好。", Mood.SAD),
-                        new QuizModels.Answer("為什麼不送現成的花？", Mood.ANGER),
-                        new QuizModels.Answer("怕種子會長出怪植物。", Mood.FEAR),
-                        new QuizModels.Answer("我連仙人掌都養不活。", Mood.SELF_ABASEMENT),
-                        new QuizModels.Answer("擔心種植方法太困難。", Mood.ANXIETY),
-                        new QuizModels.Answer("種子看起來像蟲卵，不舒服。", Mood.DISGUST)
+                new QuizModels.Question("After succeeding in the challenge, the garden gives you seeds. You...", Arrays.asList(
+                        new QuizModels.Answer("Say, \"Thank you! I'll make it bloom into the most beautiful flower!\"", Mood.HAPPY),
+                        new QuizModels.Answer("Think the seed can sprout, but I might not take good care of it.", Mood.SAD),
+                        new QuizModels.Answer("Wonder why it didn't give a ready-made flower?", Mood.ANGER),
+                        new QuizModels.Answer("Are afraid the seed might grow into a strange plant.", Mood.FEAR),
+                        new QuizModels.Answer("Think I can't even keep a cactus alive.", Mood.SELF_ABASEMENT),
+                        new QuizModels.Answer("Worry the planting method is too difficult.", Mood.ANXIETY),
+                        new QuizModels.Answer("Think the seeds look like insect eggs; it's uncomfortable.", Mood.DISGUST)
                 ))
         );
         return new StoryTheme(title, story, questions);

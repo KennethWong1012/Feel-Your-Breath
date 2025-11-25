@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="24dp"
             android:background="@color/white_element_bg"
             android:paddingLeft="24dp"
             android:paddingTop="8dp"
@@ -39,54 +39,82 @@
             android:text="@string/random_colour" />
 
         <Button
+            android:id="@+id/btnFavoriteColors"
+            style="@style/MainButtonStyle"
+            android:text="@string/favorite_colors" />
+
+        <Button
             android:id="@+id/btnRecord"
             style="@style/MainButtonStyle"
             android:text="@string/record" />
 
-        <GridLayout
+        <!-- 白色底板包裹顏色矩陣 -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:columnCount="7"
-            android:rowCount="1">
+            android:layout_marginTop="24dp"
+            android:background="@color/white_element_bg"
+            android:padding="8dp">
 
-            <Button
-                android:id="@+id/colorHappy"
-                style="@style/ColorSquareButton"
-                android:background="@color/mood_happy" />
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="7"
+                android:rowCount="1">
 
-            <Button
-                android:id="@+id/colorSad"
-                style="@style/ColorSquareButton"
-                android:background="@color/mood_sad" />
+                <View
+                    android:id="@+id/colorHappy"
+                    style="@style/ColorSquareButton"
+                    android:background="@color/mood_happy" />
 
-            <Button
-                android:id="@+id/colorAnger"
-                style="@style/ColorSquareButton"
-                android:background="@color/mood_anger" />
+                <View
+                    android:id="@+id/colorSad"
+                    style="@style/ColorSquareButton"
+                    android:background="@color/mood_sad" />
 
-            <Button
-                android:id="@+id/colorFear"
-                style="@style/ColorSquareButton"
-                android:background="@color/mood_fear" />
+                <View
+                    android:id="@+id/colorAnger"
+                    style="@style/ColorSquareButton"
+                    android:background="@color/mood_anger" />
 
-            <Button
-                android:id="@+id/colorSelfAbasement"
-                style="@style/ColorSquareButton"
-                android:background="@color/mood_self_abasement" />
+                <View
+                    android:id="@+id/colorFear"
+                    style="@style/ColorSquareButton"
+                    android:background="@color/mood_fear" />
 
-            <Button
-                android:id="@+id/colorAnxiety"
-                style="@style/ColorSquareButton"
-                android:background="@color/mood_anxiety" />
+                <View
+                    android:id="@+id/colorSelfAbasement"
+                    style="@style/ColorSquareButton"
+                    android:background="@color/mood_self_abasement" />
 
-            <Button
-                android:id="@+id/colorDisgust"
-                style="@style/ColorSquareButton"
-                android:background="@color/mood_disgust" />
-        </GridLayout>
+                <View
+                    android:id="@+id/colorAnxiety"
+                    style="@style/ColorSquareButton"
+                    android:background="@color/mood_anxiety" />
 
+                <View
+                    android:id="@+id/colorDisgust"
+                    style="@style/ColorSquareButton"
+                    android:background="@color/mood_disgust" />
+
+
+            </GridLayout>
+        </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/white_box_background"
+        android:paddingHorizontal="32dp"
+        android:text="@string/logout"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnPause"
@@ -94,9 +122,8 @@
         android:layout_height="64dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
         android:background="@drawable/circular_button_background"
         android:drawableTop="@drawable/pause_icon"
-        android:paddingTop="20dp" />
+        android:paddingTop="13dp" />
 
 </RelativeLayout>

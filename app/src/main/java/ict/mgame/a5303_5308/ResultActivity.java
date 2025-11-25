@@ -1,6 +1,5 @@
 package ict.mgame.a5303_5308;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,35 +14,36 @@ public class ResultActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // 這行程式碼會加載我們剛剛修正的 activity_result.xml 檔案
         setContentView(R.layout.activity_result);
 
+        // 綁定 UI 元件
         View viewColorPreview = findViewById(R.id.viewColorPreview);
         TextView tvMoodResult = findViewById(R.id.tvMoodResult);
         Button btnReturnMain = findViewById(R.id.btnReturnMain);
         Button btnPause = findViewById(R.id.btnPause);
 
+        // 從 Intent 中獲取心情結果
         String moodName = getIntent().getStringExtra("RESULT_MOOD");
         if (moodName != null) {
             try {
-                Mood resultMood = Mood.valueOf(moodName);
+                Mood mood = Mood.valueOf(moodName);
 
-                // 更新UI
-                viewColorPreview.setBackgroundColor(ContextCompat.getColor(this, resultMood.getColorResId()));
-                tvMoodResult.setText(getString(resultMood.getNameResId()));
+                // 根據心情設定顏色和文字
+                viewColorPreview.setBackgroundColor(ContextCompat.getColor(this, mood.getColorResId()));
+                tvMoodResult.setText(getString(mood.getNameResId()));
 
             } catch (IllegalArgumentException e) {
-                // 如果傳入的 moodName 無效
+                // 如果傳來的心情名稱無效，做一個預設處理
                 tvMoodResult.setText("Unknown Mood");
+                viewColorPreview.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
             }
         }
 
-        btnReturnMain.setOnClickListener(v -> {
-            Intent intent = new Intent(ResultActivity.this, MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
-        });
+        // 返回按鈕的點擊事件
+        btnReturnMain.setOnClickListener(v -> finish());
 
+        // 暫停按鈕的點擊事件
         btnPause.setOnClickListener(v -> {
             Toast.makeText(this, R.string.placeholder_feature, Toast.LENGTH_SHORT).show();
         });

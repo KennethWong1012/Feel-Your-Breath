@@ -4,6 +4,8 @@
     <!-- 通用 -->
     <string name="main_page">Main Page</string>
     <string name="record">Record</string>
+    <string name="logout">Logout</string>
+    <string name="register">Register</string>
 
     <!-- 登入介面 -->
     <string name="login">Login</string>
@@ -11,11 +13,13 @@
     <string name="password">Password:</string>
     <string name="login_failed">Login failed. Please check your credentials.</string>
     <string name="login_successful">Login Successful</string>
+    <string name="register_placeholder">Registration feature is not yet implemented.</string>
 
     <!-- 主頁 -->
     <string name="feel_your_breath">Feel Your Breath</string>
-    <string name="starting_test">Starting Test</string>
+    <string name="starting_test">Start Test</string>
     <string name="random_colour">Random Colour</string>
+    <string name="favorite_colors">Favorite Colors</string>
     <string name="placeholder_feature">This feature will be implemented later.</string>
 
     <!-- 故事/答題介面 -->
@@ -26,15 +30,30 @@
     <!-- 結算介面 -->
     <string name="your_mood_is">Your current mood is</string>
 
-    <!-- 心情 -->
-    <string name="happy">Happy</string>
-    <string name="sad">Sad</string>
+    <!-- 心情 (英文) -->
+    <string name="happy">Joy</string>
+    <string name="sad">Sadness</string>
     <string name="anger">Anger</string>
     <string name="fear">Fear</string>
-    <string name="self_abasement">Self-abasement</string>
+    <string name="self_abasement">Inferiority</string>
     <string name="anxiety">Anxiety</string>
     <string name="disgust">Disgust</string>
 
-    <!-- 記錄頁面 -->
-    <string name="no_records_yet">還沒有記錄。</string>
+    <!-- 記錄 & 我的最愛 頁面 -->
+    <string name="no_records_yet">No records yet.</string>
+    <string name="no_favorites_yet">No favorite colors saved yet.</string>
+    <string name="added_to_favorites">Added to favorites</string>
+    <string name="removed_from_favorites">Removed from favorites</string>
+
+    <!-- register -->
+    <string name="register_title">Create Account</string>
+    <string name="confirm_password">Confirm Password:</string>
+    <string name="register_successful">Registration successful! Please log in.</string>
+    <string name="registration_failed">Registration failed.</string>
+    <string name="error_passwords_do_not_match">Passwords do not match.</string>
+    <string name="error_username_exists">This username is already taken.</string>
+    <string name="error_fields_empty">Please fill in all fields.</string>
+    <string name="error_username_too_short">Username must be at least 4 characters.</string>
+    <string name="error_password_too_short">Password must be at least 4 characters.</string>
+
 </resources>
