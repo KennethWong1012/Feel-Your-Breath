@@ -1,7 +1,9 @@
 package ict.mgame.a5303_5308;
 
+import android.content.Context;
 import androidx.annotation.ColorRes;
 import androidx.annotation.StringRes;
+import androidx.core.content.ContextCompat;
 
 public enum Mood {
     HAPPY(R.string.happy, R.color.mood_happy),
@@ -26,5 +28,10 @@ public enum Mood {
 
     public int getColorResId() {
         return colorResId;
+    }
+
+    // 新增：獲取顏色的整數值
+    public int getColor(Context context) {
+        return ContextCompat.getColor(context, this.colorResId);
     }
 }

@@ -15,7 +15,8 @@ import androidx.core.content.ContextCompat;
 
 import java.util.List;
 
-public class RecordActivity extends AppCompatActivity {
+// 修改：繼承 BaseActivity
+public class RecordActivity extends BaseActivity {
 
     private LinearLayout layoutRecords;
     private SharedPreferencesHelper sharedPreferencesHelper;
@@ -28,7 +29,7 @@ public class RecordActivity extends AppCompatActivity {
 
         layoutRecords = findViewById(R.id.layoutRecords);
         Button btnReturnMain = findViewById(R.id.btnReturnMain);
-        Button btnPause = findViewById(R.id.btnPause);
+        // btnPause 的邏輯已在 BaseActivity 中處理
 
         sharedPreferencesHelper = new SharedPreferencesHelper(this);
         inflater = LayoutInflater.from(this);
@@ -36,7 +37,6 @@ public class RecordActivity extends AppCompatActivity {
         loadRecords();
 
         btnReturnMain.setOnClickListener(v -> finish());
-        btnPause.setOnClickListener(v -> Toast.makeText(this, R.string.placeholder_feature, Toast.LENGTH_SHORT).show());
     }
 
     private void loadRecords() {
@@ -66,13 +66,22 @@ public class RecordActivity extends AppCompatActivity {
 
             try {
                 Mood mood = Mood.valueOf(item.getMood());
+                int color = mood.getColor(this);
                 tvMood.setText(getString(mood.getNameResId()));
-                viewColor.setBackgroundColor(ContextCompat.getColor(this, mood.getColorResId()));
+                viewColor.setBackgroundColor(color);
 
-                // 設置星星的初始狀態
+                // 新增：點擊顏色方塊發送顏色
+                viewColor.setOnClickListener(v -> {
+                    if (bluetoothLeManager.isConnected()) {
+                        bluetoothLeManager.sendColor(color);
+                        Toast.makeText(this, "Color sent: " + getString(mood.getNameResId()), Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(this, "Bluetooth not connected", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
                 updateStarIcon(btnFavorite, sharedPreferencesHelper.isFavorite(mood));
 
-                // 星星按鈕點擊事件
                 btnFavorite.setOnClickListener(v -> {
                     if (sharedPreferencesHelper.isFavorite(mood)) {
                         sharedPreferencesHelper.removeFavorite(mood);
@@ -93,7 +102,6 @@ public class RecordActivity extends AppCompatActivity {
 
             layoutRecords.addView(recordView);
 
-            // 添加分隔線
             View separator = new View(this);
             separator.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT, 2));

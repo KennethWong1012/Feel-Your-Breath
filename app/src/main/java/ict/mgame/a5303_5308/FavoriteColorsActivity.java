@@ -17,7 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class FavoriteColorsActivity extends AppCompatActivity {
+// 修改：繼承 BaseActivity
+public class FavoriteColorsActivity extends BaseActivity {
 
     private LinearLayout layoutFavorites;
     private SharedPreferencesHelper sharedPreferencesHelper;
@@ -26,6 +27,7 @@ public class FavoriteColorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // 注意：這裡不能調用 super.setContentView，因為 BaseActivity 已經處理了
         setContentView(R.layout.activity_favorite_colors);
 
         layoutFavorites = findViewById(R.id.layoutFavorites);
@@ -64,7 +66,6 @@ public class FavoriteColorsActivity extends AppCompatActivity {
         }
 
         for (Mood mood : favoriteMoods) {
-            // 重用 list_item_record 佈局，但隱藏日期
             View favoriteView = inflater.inflate(R.layout.list_item_record, layoutFavorites, false);
 
             TextView tvDate = favoriteView.findViewById(R.id.tvRecordDate);
@@ -72,21 +73,30 @@ public class FavoriteColorsActivity extends AppCompatActivity {
             View viewColor = favoriteView.findViewById(R.id.viewRecordColor);
             ImageButton btnFavorite = favoriteView.findViewById(R.id.btnFavoriteStar);
 
-            tvDate.setVisibility(View.GONE); // 隱藏日期
+            tvDate.setVisibility(View.GONE);
             tvMood.setText(getString(mood.getNameResId()));
-            viewColor.setBackgroundColor(ContextCompat.getColor(this, mood.getColorResId()));
-            btnFavorite.setImageResource(R.drawable.ic_star_filled); // 這裡都是最愛，所以是實心
+            int color = mood.getColor(this);
+            viewColor.setBackgroundColor(color);
+            btnFavorite.setImageResource(R.drawable.ic_star_filled);
 
-            // 點擊星星移除最愛
+            // 新增：點擊顏色方塊發送顏色
+            viewColor.setOnClickListener(v -> {
+                if (bluetoothLeManager.isConnected()) {
+                    bluetoothLeManager.sendColor(color);
+                    Toast.makeText(this, "Color sent: " + getString(mood.getNameResId()), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Bluetooth not connected", Toast.LENGTH_SHORT).show();
+                }
+            });
+
             btnFavorite.setOnClickListener(v -> {
                 sharedPreferencesHelper.removeFavorite(mood);
                 Toast.makeText(this, R.string.removed_from_favorites, Toast.LENGTH_SHORT).show();
-                loadFavorites(); // 重新加載列表以刷新UI
+                loadFavorites();
             });
 
             layoutFavorites.addView(favoriteView);
 
-            // 添加分隔線
             View separator = new View(this);
             separator.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT, 2));

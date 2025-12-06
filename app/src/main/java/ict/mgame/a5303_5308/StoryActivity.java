@@ -4,40 +4,43 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
 
-public class StoryActivity extends AppCompatActivity {
+// 修改：繼承 BaseActivity
+public class StoryActivity extends BaseActivity {
 
-    private int selectedThemeIndex;
+    private TextView tvTopicTitle;
+    private TextView tvStoryContent;
+    private Button btnStartQuiz;
+
+    private int currentThemeIndex;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story);
 
-        TextView tvTopicTitle = findViewById(R.id.tvTopicTitle);
-        TextView tvStoryContent = findViewById(R.id.tvStoryContent);
-        Button btnStartQuiz = findViewById(R.id.btnStartQuiz);
+        tvTopicTitle = findViewById(R.id.tvTopicTitle);
+        tvStoryContent = findViewById(R.id.tvStoryContent);
+        btnStartQuiz = findViewById(R.id.btnStartQuiz);
 
         // 隨機選擇一個故事主題
         List<StoryTheme> themes = QuizData.getStoryThemes();
-        selectedThemeIndex = new Random().nextInt(themes.size());
-        StoryTheme selectedTheme = themes.get(selectedThemeIndex);
+        currentThemeIndex = new Random().nextInt(themes.size());
+        StoryTheme selectedTheme = themes.get(currentThemeIndex);
 
-        // 更新UI顯示主題和故事內容
+        // 顯示故事內容
         tvTopicTitle.setText(selectedTheme.getThemeTitle());
         tvStoryContent.setText(selectedTheme.getStoryContent());
 
+        // 開始測驗按鈕
         btnStartQuiz.setOnClickListener(v -> {
             Intent intent = new Intent(StoryActivity.this, QuizActivity.class);
-            // 將選擇的主題索引傳遞給下一個 Activity
-            intent.putExtra("THEME_INDEX", selectedThemeIndex);
+            intent.putExtra("THEME_INDEX", currentThemeIndex);
             startActivity(intent);
-            finish(); // 開始測驗後關閉此頁面
+            finish(); // 答題後不返回故事頁
         });
     }
 }

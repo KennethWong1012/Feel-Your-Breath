@@ -7,6 +7,18 @@
     android:padding="24dp"
     tools:context=".MainActivity">
 
+    <!-- 新增：藍牙連接按鈕 -->
+    <ImageButton
+        android:id="@+id/btnBluetooth"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_bluetooth_disabled"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/ble_connect" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -96,7 +108,6 @@
                     android:id="@+id/colorDisgust"
                     style="@style/ColorSquareButton"
                     android:background="@color/mood_disgust" />
-
 
             </GridLayout>
         </LinearLayout>

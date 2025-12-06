@@ -56,4 +56,14 @@
     <string name="error_username_too_short">Username must be at least 4 characters.</string>
     <string name="error_password_too_short">Password must be at least 4 characters.</string>
 
+    <string name="ble_connect">Connect Device</string>
+    <string name="ble_disconnect">Disconnect</string>
+    <string name="ble_status_disconnected">Disconnected</string>
+    <string name="ble_status_connecting">Connecting...</string>
+    <string name="ble_status_connected">Connected</string>
+    <string name="ble_status_scanning">Scanning...</string>
+    <string name="ble_device_not_found">Device not found.</string>
+    <string name="ble_permissions_not_granted">Bluetooth permissions not granted.</string>
+    <string name="lights_off">Lights Off</string>
+
 </resources>

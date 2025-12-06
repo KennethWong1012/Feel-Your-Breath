@@ -2,7 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 聲明藍牙權限 -->
+    <!-- 舊版 Android 需要的權限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- Android 6.0+ 掃描 BLE 需要位置權限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Android 12+ (API 31+) 需要的新藍牙權限 -->
+    <!-- 用於掃描 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <!-- 用於連接 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- 聲明 App 需要 BLE 功能 -->
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -20,6 +38,7 @@
             </intent-filter>
         </activity>
 
+        <!-- 將所有 Activity 的父類指向我們將要建立的 BaseActivity -->
         <activity android:name=".MainActivity" />
         <activity android:name=".StoryActivity" />
         <activity android:name=".QuizActivity" />

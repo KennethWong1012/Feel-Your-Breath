@@ -6,15 +6,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QuizActivity extends AppCompatActivity {
+// 修改：繼承 BaseActivity
+public class QuizActivity extends BaseActivity {
 
     private TextView tvQuestion;
     private List<Button> answerButtons;
@@ -43,9 +42,7 @@ public class QuizActivity extends AppCompatActivity {
             moodCounts.put(mood, 0);
         }
 
-        // 從 Intent 獲取主題索引
         int themeIndex = getIntent().getIntExtra("THEME_INDEX", 0);
-        // 根據索引獲取對應的題目列表
         questions = QuizData.getStoryThemes().get(themeIndex).getQuestions();
 
         displayQuestion();
@@ -57,7 +54,7 @@ public class QuizActivity extends AppCompatActivity {
             tvQuestion.setText(currentQuestion.getQuestionText());
 
             List<QuizModels.Answer> answers = new ArrayList<>(currentQuestion.getAnswers());
-            Collections.shuffle(answers); // 打亂答案順序
+            Collections.shuffle(answers);
 
             char optionChar = 'A';
             for (int i = 0; i < answerButtons.size(); i++) {
@@ -77,17 +74,15 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void onAnswerSelected(Mood mood) {
-        // 增加對應心情的計數
         moodCounts.put(mood, moodCounts.get(mood) + 1);
         currentQuestionIndex++;
         displayQuestion();
     }
 
     private void finishQuiz() {
-        Mood finalMood = Mood.HAPPY; // 預設心情
+        Mood finalMood = Mood.HAPPY;
         int maxCount = -1;
 
-        // 找出計數最高的心情
         for (Map.Entry<Mood, Integer> entry : moodCounts.entrySet()) {
             if (entry.getValue() > maxCount) {
                 maxCount = entry.getValue();
@@ -95,11 +90,9 @@ public class QuizActivity extends AppCompatActivity {
             }
         }
 
-        // 儲存記錄
         SharedPreferencesHelper helper = new SharedPreferencesHelper(this);
         helper.saveRecord(finalMood);
 
-        // 跳轉到結果頁面
         Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
         intent.putExtra("RESULT_MOOD", finalMood.name());
         intent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
