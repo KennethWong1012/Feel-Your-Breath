@@ -17,6 +17,7 @@ import android.bluetooth.le.ScanResult;
 import android.bluetooth.le.ScanSettings;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.ParcelUuid;
@@ -24,16 +25,14 @@ import android.util.Log;
 
 import androidx.core.app.ActivityCompat;
 
-// 修正了這裡的 import
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 import java.util.UUID;
 
-@SuppressLint("MissingPermission") // 權限檢查將在使用此類的地方完成
+@SuppressLint("MissingPermission")
 public class BluetoothLeManager {
 
     private static final String TAG = "BluetoothLeManager";
-    private static final String DEVICE_NAME = "ESP32_Emotion_Light"; // ESP32 設備的名稱
 
     // ESP32 程式碼中定義的 UUID
     private static final UUID SERVICE_UUID = UUID.fromString("4fafc201-1fb5-459e-8fcc-c5c9c331914b");
@@ -49,7 +48,7 @@ public class BluetoothLeManager {
 
     private Handler handler = new Handler(Looper.getMainLooper());
     private boolean isScanning = false;
-    private static final long SCAN_PERIOD = 10000; // 掃描 10 秒
+    private static final long SCAN_PERIOD = 10000;
 
     private ConnectionStateListener connectionStateListener;
 
@@ -60,7 +59,6 @@ public class BluetoothLeManager {
         CONNECTED
     }
 
-    // 單例模式
     public static synchronized BluetoothLeManager getInstance() {
         if (instance == null) {
             instance = new BluetoothLeManager();
@@ -144,7 +142,9 @@ public class BluetoothLeManager {
         public void onScanResult(int callbackType, ScanResult result) {
             super.onScanResult(callbackType, result);
             BluetoothDevice device = result.getDevice();
-            Log.d(TAG, "Device found: " + device.getName() + " [" + device.getAddress() + "]");
+            // A null check for device name is good practice
+            String deviceName = device.getName() == null ? "Unknown" : device.getName();
+            Log.d(TAG, "Device found: " + deviceName + " [" + device.getAddress() + "]");
             stopScan();
             if (connectionStateListener != null) {
                 connectionStateListener.onStateChanged(BleConnectionState.CONNECTING, null);
@@ -171,7 +171,9 @@ public class BluetoothLeManager {
                 gatt.discoverServices();
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
                 Log.i(TAG, "Disconnected from GATT server.");
-                bluetoothGatt.close();
+                if (bluetoothGatt != null) {
+                    bluetoothGatt.close();
+                }
                 bluetoothGatt = null;
                 rxCharacteristic = null;
                 if (connectionStateListener != null) {
@@ -191,8 +193,6 @@ public class BluetoothLeManager {
                         if (connectionStateListener != null) {
                             handler.post(() -> connectionStateListener.onStateChanged(BleConnectionState.CONNECTED, null));
                         }
-                        // 連接成功後，發送指令讓燈帶進入呼吸燈模式
-                        startBreathingEffect();
                     } else {
                         Log.w(TAG, "Characteristic not found!");
                         disconnect();
@@ -210,17 +210,16 @@ public class BluetoothLeManager {
     // --- 公共指令方法 ---
 
     public void sendColor(int color) {
-        // 將 Android 的 color int 轉換為 #RRGGBB 格式的字串
         String hexColor = String.format("#%06X", (0xFFFFFF & color));
         sendData(hexColor);
     }
 
     public void turnOffLights() {
-        sendData("#000000"); // 發送黑色指令來關燈
+        sendData("#000000");
     }
 
-    public void startBreathingEffect() {
-        sendData("#BREATHE"); // 發送特殊指令啟動呼吸燈
+    public void startRandomColorEffect() {
+        sendData("#RANDOM");
     }
 
     private void sendData(String data) {
@@ -228,10 +227,17 @@ public class BluetoothLeManager {
             Log.w(TAG, "Not connected. Cannot send data.");
             return;
         }
-        rxCharacteristic.setValue(data.getBytes(StandardCharsets.UTF_8));
-        rxCharacteristic.setWriteType(BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT);
-        boolean success = bluetoothGatt.writeCharacteristic(rxCharacteristic);
-        Log.d(TAG, "Writing data: " + data + " - Success: " + success);
+
+        // Android 13 (TIRAMISU) and above require a new way to write characteristics
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            // ✨✨✨ THIS IS THE CORRECTED LINE ✨✨✨
+            bluetoothGatt.writeCharacteristic(rxCharacteristic, data.getBytes(StandardCharsets.UTF_8), BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT);
+        } else {
+            rxCharacteristic.setValue(data.getBytes(StandardCharsets.UTF_8));
+            rxCharacteristic.setWriteType(BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT);
+            bluetoothGatt.writeCharacteristic(rxCharacteristic);
+        }
+        Log.d(TAG, "Writing data: " + data);
     }
 
     public interface ConnectionStateListener {

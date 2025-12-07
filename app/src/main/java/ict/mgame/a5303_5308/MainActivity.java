@@ -16,21 +16,24 @@ import androidx.core.content.ContextCompat;
 
 import java.util.Random;
 
-// 修改：繼承 BaseActivity
 public class MainActivity extends BaseActivity implements BluetoothLeManager.ConnectionStateListener {
 
-    private SharedPreferencesHelper sharedPreferencesHelper;
     private ImageButton btnBluetooth;
 
-    // 用於請求權限
     private final ActivityResultLauncher<String[]> requestPermissionLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), result -> {
-                Boolean fineLocationGranted = result.getOrDefault(Manifest.permission.ACCESS_FINE_LOCATION, false);
-                Boolean bluetoothScanGranted = Build.VERSION.SDK_INT < Build.VERSION_CODES.S || result.getOrDefault(Manifest.permission.BLUETOOTH_SCAN, false);
-                Boolean bluetoothConnectGranted = Build.VERSION.SDK_INT < Build.VERSION_CODES.S || result.getOrDefault(Manifest.permission.BLUETOOTH_CONNECT, false);
+                boolean allGranted = true;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                    if (!result.getOrDefault(Manifest.permission.BLUETOOTH_SCAN, false) ||
+                            !result.getOrDefault(Manifest.permission.BLUETOOTH_CONNECT, false)) {
+                        allGranted = false;
+                    }
+                }
+                if (!result.getOrDefault(Manifest.permission.ACCESS_FINE_LOCATION, false)) {
+                    allGranted = false;
+                }
 
-                if (fineLocationGranted && bluetoothScanGranted && bluetoothConnectGranted) {
-                    // 權限已授予，開始連接
+                if (allGranted) {
                     bluetoothLeManager.connect();
                 } else {
                     Toast.makeText(this, R.string.ble_permissions_not_granted, Toast.LENGTH_SHORT).show();
@@ -42,17 +45,17 @@ public class MainActivity extends BaseActivity implements BluetoothLeManager.Con
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sharedPreferencesHelper = new SharedPreferencesHelper(this);
+        // 注意：SharedPreferencesHelper 在這裡不再需要，因為隨機顏色不儲存記錄了
+        // sharedPreferencesHelper = new SharedPreferencesHelper(this);
+
         bluetoothLeManager.setConnectionStateListener(this);
 
-        // 初始化按鈕
         btnBluetooth = findViewById(R.id.btnBluetooth);
         Button btnStartingTest = findViewById(R.id.btnStartingTest);
         Button btnRandomColour = findViewById(R.id.btnRandomColour);
         Button btnFavoriteColors = findViewById(R.id.btnFavoriteColors);
         Button btnRecord = findViewById(R.id.btnRecord);
         Button btnLogout = findViewById(R.id.btnLogout);
-        // btnPause 的邏輯已在 BaseActivity 中處理
 
         View colorHappy = findViewById(R.id.colorHappy);
         View colorSad = findViewById(R.id.colorSad);
@@ -62,7 +65,6 @@ public class MainActivity extends BaseActivity implements BluetoothLeManager.Con
         View colorAnxiety = findViewById(R.id.colorAnxiety);
         View colorDisgust = findViewById(R.id.colorDisgust);
 
-        // --- 設定點擊事件 ---
         btnBluetooth.setOnClickListener(v -> handleBluetoothClick());
 
         btnStartingTest.setOnClickListener(v -> {
@@ -70,17 +72,17 @@ public class MainActivity extends BaseActivity implements BluetoothLeManager.Con
             startActivity(intent);
         });
 
+        // --- ✨ 核心修改：重寫「Random Colour」按鈕的行為 ---
         btnRandomColour.setOnClickListener(v -> {
-            Mood[] moods = Mood.values();
-            Mood randomMood = moods[new Random().nextInt(moods.length)];
-            sharedPreferencesHelper.saveRecord(randomMood);
-
-            // 新增：發送顏色到藍牙設備
             if (bluetoothLeManager.isConnected()) {
-                int color = ContextCompat.getColor(this, randomMood.getColorResId());
-                bluetoothLeManager.sendColor(color);
+                // 如果已連接，發送啟動隨機模式的指令
+                bluetoothLeManager.startRandomColorEffect();
+                Toast.makeText(this, "已啟動隨機呼吸燈模式", Toast.LENGTH_SHORT).show();
+            } else {
+                // 如果未連接，提示用戶
+                Toast.makeText(this, "請先連接藍牙設備", Toast.LENGTH_SHORT).show();
             }
-            showResult(randomMood);
+            // 不再儲存記錄，也不再跳轉到 ResultActivity
         });
 
         btnFavoriteColors.setOnClickListener(v -> {
@@ -94,7 +96,6 @@ public class MainActivity extends BaseActivity implements BluetoothLeManager.Con
         });
 
         btnLogout.setOnClickListener(v -> {
-            // 登出前斷開藍牙
             bluetoothLeManager.disconnect();
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -102,7 +103,6 @@ public class MainActivity extends BaseActivity implements BluetoothLeManager.Con
             finish();
         });
 
-        // --- 顏色方塊點擊事件 ---
         colorHappy.setOnClickListener(v -> handleColorClick(Mood.HAPPY));
         colorSad.setOnClickListener(v -> handleColorClick(Mood.SAD));
         colorAnger.setOnClickListener(v -> handleColorClick(Mood.ANGER));
@@ -111,17 +111,14 @@ public class MainActivity extends BaseActivity implements BluetoothLeManager.Con
         colorAnxiety.setOnClickListener(v -> handleColorClick(Mood.ANXIETY));
         colorDisgust.setOnClickListener(v -> handleColorClick(Mood.DISGUST));
 
-        // 初始更新藍牙按鈕狀態
         updateBluetoothButton(bluetoothLeManager.isConnected() ? BluetoothLeManager.BleConnectionState.CONNECTED : BluetoothLeManager.BleConnectionState.DISCONNECTED);
     }
 
     private void handleColorClick(Mood mood) {
-        // 新增：發送顏色到藍牙設備
         if (bluetoothLeManager.isConnected()) {
             int color = ContextCompat.getColor(this, mood.getColorResId());
             bluetoothLeManager.sendColor(color);
         }
-        // 原有邏輯：跳轉到結果頁面
         showResult(mood);
     }
 
@@ -143,7 +140,9 @@ public class MainActivity extends BaseActivity implements BluetoothLeManager.Con
             };
         } else {
             permissions = new String[]{
-                    Manifest.permission.ACCESS_FINE_LOCATION
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.BLUETOOTH, // For older versions
+                    Manifest.permission.BLUETOOTH_ADMIN // For older versions
             };
         }
 
@@ -171,11 +170,9 @@ public class MainActivity extends BaseActivity implements BluetoothLeManager.Con
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // 清理監聽器，防止內存洩漏
         bluetoothLeManager.setConnectionStateListener(null);
     }
 
-    // --- 藍牙狀態回調 ---
     @Override
     public void onStateChanged(BluetoothLeManager.BleConnectionState state, String message) {
         updateBluetoothButton(state);
