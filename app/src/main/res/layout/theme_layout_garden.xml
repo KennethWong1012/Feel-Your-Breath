@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color_garden"> <!-- 請替換為您的花園主題背景 -->
+
+    <!-- 貼圖 (Garden) -->
+
+    <ImageView
+        android:id="@+id/sticker_garden_1"
+        android:layout_width="72dp"
+        android:layout_height="279dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="188dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_garden_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/sticker_garden_2"
+        android:layout_width="122dp"
+        android:layout_height="112dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_garden_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/sticker_garden_3"
+        android:layout_width="282dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_garden_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/sticker_garden_4"
+        android:layout_width="156dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_garden_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/sticker_garden_5"
+        android:layout_width="133dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="144dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_garden_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/sticker_garden_6"
+        android:layout_width="236dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_garden_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/sticker_garden_7"
+        android:layout_width="113dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_garden_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <!-- 嵌入中心內容 -->
+
+    <ImageView
+        android:id="@+id/sticker_garden_8"
+        android:layout_width="76dp"
+        android:layout_height="354dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="132dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_garden_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <include
+        layout="@layout/layout_story_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

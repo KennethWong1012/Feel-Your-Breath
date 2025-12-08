@@ -16,4 +16,14 @@
     <color name="mood_self_abasement">#FFD4F0</color>
     <color name="mood_anxiety">#FFC89C</color>
     <color name="mood_disgust">#C8F4A8</color>
+
+    <!-- 各個主題的背景顏色 -->
+    <color name="theme_color_animal">#EFE5D3</color>
+    <color name="theme_color_forest">#D9EAD3</color>
+    <color name="theme_color_garden">#D4E6E1</color>
+    <color name="theme_color_ocean">#A4C2F4</color>
+    <color name="theme_color_sky">#C9DAF8</color>
+    <color name="theme_color_space">#35415F</color>
+    <color name="theme_color_time">#3C3C4D</color>
+
 </resources>

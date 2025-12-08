@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,13 +15,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-// 修改：繼承 BaseActivity
 public class QuizActivity extends BaseActivity {
 
     private TextView tvQuestion;
     private List<Button> answerButtons;
     private List<QuizModels.Question> questions;
     private int currentQuestionIndex = 0;
+    private LinearLayout quizRootLayout;
 
     private Map<Mood, Integer> moodCounts;
 
@@ -28,6 +31,7 @@ public class QuizActivity extends BaseActivity {
         setContentView(R.layout.activity_quiz);
 
         tvQuestion = findViewById(R.id.tvQuestion);
+        quizRootLayout = findViewById(R.id.quiz_root_layout);
         answerButtons = new ArrayList<>();
         answerButtons.add(findViewById(R.id.btnAnswerA));
         answerButtons.add(findViewById(R.id.btnAnswerB));
@@ -43,10 +47,17 @@ public class QuizActivity extends BaseActivity {
         }
 
         int themeIndex = getIntent().getIntExtra("THEME_INDEX", 0);
-        questions = QuizData.getStoryThemes().get(themeIndex).getQuestions();
+        StoryTheme currentTheme = QuizData.getStoryThemes().get(themeIndex);
+        questions = currentTheme.getQuestions();
+
+        // ✨ --- 核心修改：從設定背景顏色改為設定背景圖片 --- ✨
+        quizRootLayout.setBackgroundResource(currentTheme.getBackgroundDrawableResId());
+        // ✨ --- 修改結束 --- ✨
 
         displayQuestion();
     }
+
+    // ... displayQuestion, onAnswerSelected, finishQuiz 方法維持不變 ...
 
     private void displayQuestion() {
         if (currentQuestionIndex < questions.size()) {

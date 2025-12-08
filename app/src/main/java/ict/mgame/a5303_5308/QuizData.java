@@ -81,7 +81,7 @@ public class QuizData {
                         new QuizModels.Answer("Are relieved to finally leave this troublesome place.", Mood.DISGUST)
                 ))
         );
-        return new StoryTheme(title, story, questions);
+        return new StoryTheme(title, story, questions, "forest", R.layout.theme_layout_forest, R.color.theme_color_forest);
     }
 
     private static StoryTheme createTheme2() {
@@ -143,8 +143,9 @@ public class QuizData {
                         new QuizModels.Answer("Tired of these hypocritical welcomes.", Mood.DISGUST)
                 ))
         );
-        return new StoryTheme(title, story, questions);
+        return new StoryTheme(title, story, questions, "space", R.layout.theme_layout_space, R.color.theme_color_space);
     }
+
 
     private static StoryTheme createTheme3() {
         String title = "Journey to the Underwater Kingdom";
@@ -205,9 +206,8 @@ public class QuizData {
                         new QuizModels.Answer("That the feeling of being wet and sticky is really uncomfortable.", Mood.DISGUST)
                 ))
         );
-        return new StoryTheme(title, story, questions);
+        return new StoryTheme(title, story, questions, "ocean", R.layout.theme_layout_ocean, R.color.theme_color_ocean);
     }
-
     private static StoryTheme createTheme4() {
         String title = "Cloud Castle Adventure";
         String story = "You fly to a castle in the clouds on a balloon! There are cotton candy clouds and a laughing sun; everything is soft and floaty!";
@@ -267,7 +267,7 @@ public class QuizData {
                         new QuizModels.Answer("Think the cloud's gift is just water vapor.", Mood.DISGUST)
                 ))
         );
-        return new StoryTheme(title, story, questions);
+        return new StoryTheme(title, story, questions, "sky", R.layout.theme_layout_sky, R.color.theme_color_sky);
     }
 
     private static StoryTheme createTheme5() {
@@ -329,7 +329,7 @@ public class QuizData {
                         new QuizModels.Answer("Think they have too much fur; it feels like it will cause allergies.", Mood.DISGUST)
                 ))
         );
-        return new StoryTheme(title, story, questions);
+        return new StoryTheme(title, story, questions, "animal", R.layout.theme_layout_animal, R.color.theme_color_animal);
     }
 
     private static StoryTheme createTheme6() {
@@ -391,7 +391,7 @@ public class QuizData {
                         new QuizModels.Answer("Feel the trip was exhausting and uncomfortable.", Mood.DISGUST)
                 ))
         );
-        return new StoryTheme(title, story, questions);
+        return new StoryTheme(title, story, questions, "time", R.layout.theme_layout_time, R.color.theme_color_time);
     }
 
     private static StoryTheme createTheme7() {
@@ -453,6 +453,6 @@ public class QuizData {
                         new QuizModels.Answer("Think the seeds look like insect eggs; it's uncomfortable.", Mood.DISGUST)
                 ))
         );
-        return new StoryTheme(title, story, questions);
+        return new StoryTheme(title, story, questions, "garden", R.layout.theme_layout_garden, R.color.theme_color_garden);
     }
 }

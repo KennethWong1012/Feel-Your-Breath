@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoryActivity">
+
+    <!-- 1. 背景圖 -->
+    <!-- 請將 tools:src 替換成您的花園背景圖，例如 @drawable/bg_story_garden -->
+
+    <!--
+    ================================================================
+    貼圖遊樂場 (Sticker Playground)
+    ================================================================
+    說明：
+    - 這裡的每一個 ImageView 都對應一個貼圖。
+    - 它們全部是 visible 的，方便您在預覽中看到。
+    - 您可以直接在右邊的預覽畫面中拖曳它們。
+    - 拖曳後，下面的 layout_margin... 值會自動更新。
+    - 這些更新後的值，就是您需要填入 StickerConfig 的數字！
+    ================================================================
+    -->
+
+    <!-- 1. garden_1: 左邊的柱子 -->
+    <!-- 需求：靠左、靠上。請拖曳它來決定最終的 marginTop 值。 -->
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <ImageView
+        android:id="@+id/test_sticker_1"
+        android:layout_width="74dp"
+        android:layout_height="213dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="184dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/bg_story_garden_1" />
+
+    <ImageView
+        android:id="@+id/test_sticker_2"
+        android:layout_width="141dp"
+        android:layout_height="214dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/bg_story_garden_2" />
+
+    <ImageView
+        android:id="@+id/test_sticker_3"
+        android:layout_width="269dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/bg_story_garden_3" />
+
+    <ImageView
+        android:id="@+id/test_sticker_4"
+        android:layout_width="172dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/bg_story_garden_4" />
+
+    <ImageView
+        android:id="@+id/test_sticker_5"
+        android:layout_width="118dp"
+        android:layout_height="126dp"
+        android:layout_marginEnd="292dp"
+        android:layout_marginBottom="192dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@drawable/bg_story_garden_5" />
+
+
+    <ImageView
+        android:id="@+id/test_sticker_6"
+        android:layout_width="232dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/bg_story_garden_6" />
+
+    <ImageView
+        android:id="@+id/test_sticker_7"
+        android:layout_width="118dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/bg_story_garden_7" />
+
+    <ImageView
+        android:id="@+id/test_sticker_8"
+        android:layout_width="68dp"
+        android:layout_height="367dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/bg_story_garden_8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

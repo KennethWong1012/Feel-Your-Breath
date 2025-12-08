@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color_time"> <!-- 請替換為您的時間主題背景 -->
+
+    <!-- 貼圖 (Time) -->
+
+    <ImageView
+        android:id="@+id/sticker_time_1"
+        android:layout_width="176dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_time_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/sticker_time_2"
+        android:layout_width="162dp"
+        android:layout_height="196dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_time_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/sticker_time_3"
+        android:layout_width="133dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_time_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <!-- 嵌入中心內容 -->
+
+    <ImageView
+        android:id="@+id/sticker_time_4"
+        android:layout_width="103dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="160dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_time_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/sticker_time_5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:rotation="-15"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_story_time_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <include
+        layout="@layout/layout_story_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

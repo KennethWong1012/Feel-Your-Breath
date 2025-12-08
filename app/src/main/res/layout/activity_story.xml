@@ -1,51 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/story_root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_blue_background"
-    android:padding="32dp"
-    tools:context=".StoryActivity">
+    tools:context=".StoryActivity"
+    tools:background="@drawable/bg_theme_animal"> <!-- tools:background 只是為了預覽 -->
 
+    <!-- ✨ 所有 sticker_placeholder 的 ImageView 都已刪除 ✨ -->
+
+    <!-- 中心內容區域 (維持不變) -->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/center_content_layout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/tvTopicTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:background="@color/white_element_bg"
+            android:background="@drawable/ui_title_background"
             android:paddingLeft="32dp"
             android:paddingTop="8dp"
             android:paddingRight="32dp"
             android:paddingBottom="8dp"
-            android:text="@string/topic"
             android:textColor="@color/text_color"
             android:textSize="34sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="Animal Carnival" />
 
         <TextView
             android:id="@+id/tvStoryContent"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="32dp"
-            android:background="@color/white_element_bg"
+            android:background="@drawable/ui_content_background"
             android:gravity="center"
             android:padding="16dp"
-            android:text="This is where the story content will be displayed."
             android:textColor="@color/text_color"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            tools:text="This is where the story content will be displayed." />
 
         <Button
             android:id="@+id/btnStartQuiz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/white_box_background"
+            android:background="@drawable/ui_button_background"
             android:paddingLeft="48dp"
             android:paddingRight="48dp"
             android:text="@string/start"
@@ -54,4 +63,4 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
